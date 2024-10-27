@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synzon India - Your Trusted Nutraceutical Partner</title>
+    <!-- Google Fonts for Roboto and Crushed -->
+    <link href="https://fonts.googleapis.com/css2?family=Crushed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff; /* White background for a clean look */
+            color: #333;
+        }
+        /* Navigation Bar */
+        nav {
+            background: #f7f7f7; /* Very light grey color for the navigation bar */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px; /* Adjusted padding for a better look */
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+        }
+        nav .logo-text {
+            display: flex;
+            align-items: center;
+            padding: 5px 10px; /* Adding padding for a neat look */
+            border-radius: 8px;
+            animation: fadeIn 3s ease-in-out;
+        }
+        nav .logo-text img {
+            width: 40px; /* Adjusted logo size */
+            height: 40px;
+            margin-right: 10px; /* Reduced margin to bring closer to separator */
+            transition: transform 0.3s ease;
+            animation: slideIn 3s ease-in-out;
+        }
+        nav .logo-text img:hover {
+            transform: scale(1.5); /* Increased zoom for hover effect */
+        }
+        nav .separator {
+            height: 50px;
+            width: 2px;
+            background-color: #0E2841; /* Updated separator color */
+            margin: 0 10px;
+        }
+        nav .logo-text .company-name {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            font-family: 'Roboto', sans-serif; /* Changed to match the provided image font */
+            color: #0E2841; /* Updated font color */
+            animation: fadeIn 3s ease-in-out;
+        }
+        nav .company-name .synzon {
+            font-size: 24px; /* Adjusted font size for balance */
+            font-weight: bold;
+            text-transform: uppercase; /* Make it uppercase like in the image */
+        }
+        nav .company-name .india {
+            font-size: 20px; /* Slightly smaller for "India" */
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-top: -5px; /* Slight negative margin to bring "India" closer to "Synzon" */
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        nav ul li {
+            margin: 0 15px;
+            position: relative;
+        }
+        nav ul li a {
+            color: #333; /* Dark grey text for contrast on the light grey background */
+            text-decoration: none;
+            font-size: 15px; /* Adjusted font size for better balance */
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #0E2841; /* Change to provided blue shade on hover */
+        }
+        nav ul li .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #ffffff;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            list-style: none;
+            border-radius: 5px;
+            min-width: 200px;
+        }
+        nav ul li:hover .dropdown-content {
+            display: block;
+        }
+        nav ul li .dropdown-content li {
+            margin: 5px 0;
+        }
+        nav ul li .dropdown-content li a {
+            color: #0B2F9F;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        nav ul li .dropdown-content li a:hover {
+            color: #161D6F;
+        }
+
+        /* Animation Keyframes */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateX(-50px); }
+            100% { transform: translateX(0); }
+        }
+
+        /* Hero Section */
+        .hero {
+            background-image: url('C:/Users/yash/OneDrive/Desktop/yash/Synzon india/DALL·E 2024-10-20 07.43.28 - A detailed scientific representation of leaves intertwined with molecular structures, designed for the nutraceutical industry with a different pattern.webp');
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(11, 47, 159, 0.3), rgba(11, 47, 159, 0.3));
+        }
+        .hero h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+            color: #ffffff;
+        }
+        .hero p {
+            font-size: 22px;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 1;
+            color: #ffffff;
+        }
+        .hero .cta-btn {
+            background-color: #98DED9;
+            color: #0B2F9F;
+            padding: 12px 25px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 25px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 1;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .hero .cta-btn:hover {
+            background-color: #0B2F9F;
+            color: #ffffff;
+            transform: scale(1.1);
+        }
+
+        /* Single Search Bar Section */
+        .search-bar {
+            background-color: #ffffff; /* White background for seamless appearance */
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            margin-top: -50px;
+            position: relative;
+            z-index: 5;
+            border-radius: 10px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .search-bar input {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .search-bar button {
+            background-color: #161D6F;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .search-bar button:hover {
+            background-color: #0B2F9F;
+        }
+
+        /* Introduction Sections with Image */
+        .section {
+            display: flex;
+            align-items: center;
+            padding: 40px 20px; /* Further reduced padding for a narrower look */
+            background-color: #ffffff; /* Ensure consistent background */
+        }
+        .section:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        .section img {
+            max-width: 40%;
+            margin-right: 20px;
+            border-radius: 5px;
+        }
+        .section:nth-child(even) img {
+            margin-right: 0;
+            margin-left: 20px;
+        }
+        /* Reduce the size of specific images */
+        .section:nth-child(4) img, .section:nth-child(6) img {
+            max-width: 30%;
+        }
+        .section .content {
+            max-width: 60%;
+        }
+        .section h2 {
+            font-size: 36px;
+            color: #0E2841; /* Color for section headings */
+            margin-bottom: 20px;
+        }
+        .section p {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.6;
+        }
+        .section ul {
+            list-style-type: disc;
+            padding-left: 40px;
+            text-align: left;
+            margin-top: 20px;
+        }
+        .section ul li {
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        /* Footer */
+        footer {
+            background: #f7f7f7; /* Very light grey color for the footer */
+            color: #333;
+            padding: 10px; /* Reduced padding for a more compact footer */
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav>
+    <div class="logo-text">
+        <img src="C:/Users/yash/OneDrive/Desktop/yash/Synzon india/pixelcut-export.jpeg" alt="Synzon India Logo">
+        <div class="separator"></div>
+        <div class="company-name">
+            <span class="synzon">Synzon</span>
+            <span class="india">India</span>
+        </div>
+    </div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li>
+            <a href="#">Products &#9662;</a>
+            <ul class="dropdown-content">
+                <li><a href="products.html#joint-support">Joint Support</a></li>
+                <li><a href="products.html#vitamins">Vitamins & Derivatives</a></li>
+                <li><a href="products.html#herbal-extracts">Herbal Extracts</a></li>
+                <li><a href="products.html#sport-nutrition">Sport Nutrition</a></li>
+                <li><a href="products.html#protein">Protein</a></li>
+                <li><a href="products.html#preservatives">Preservatives</a></li>
+                <li><a href="products.html#sweeteners">Sweeteners</a></li>
+                <li><a href="products.html#other-additives">Other Additives</a></li>
+            </ul>
+        </li>
+        <li><a href="#contact">Contact Us</a></li>
+    </ul>
+</nav>
+
+<!-- Hero Section -->
+<div class="hero">
+    <div class="hero-content">
+        <h1>Welcome to Synzon India</h1>
+        <p>Your trusted partner in the nutraceutical industry</p>
+        <button class="cta-btn">Explore Now</button>
+    </div>
+</div>
+
+<!-- Single Search Bar Section -->
+<div class="search-bar">
+    <input type="text" placeholder="Search for products or services...">
+    <button>Search</button>
+</div>
+
+<!-- Content Sections with Images -->
+<div class="section">
+    <img src="C:/Users/yash/OneDrive/Desktop/yash/Synzon india/istockphoto-1297045731-612x612.jpg" alt="Welcome">
+    <div class="content">
+        <h2>Welcome to Synzon India</h2>
+        <p>Welcome to Synzon India, your trusted partner in the nutraceutical industry. We are committed to providing exceptional services that help our clients meet their requirements for high-quality nutraceutical supplements and excipients. With a focus on excellence and innovation, we aim to be the leading facilitator in connecting businesses with top-tier products and solutions.</p>
+    </div>
+</div>
+
+<div class="section">
+    <img src="C:/Users/yash/OneDrive/Desktop/yash/Synzon india/WhatsApp Image 2024-10-20 at 18.53.42_f975de3b.jpg" alt="Expertise">
+    <div class="content">
+        <h2>Our Expertise in Nutraceutical Solutions</h2>
+        <p>At Synzon India, we specialize in bridging the gap between demand and supply in the nutraceutical sector. Our expertise lies in understanding the unique needs of our clients and delivering customized solutions that drive success. We offer a comprehensive range of products, including vitamins, minerals, herbal extracts, and specialty ingredients, ensuring that you have access to the finest quality supplements and excipients available in the market.</p>
+    </div>
+</div>
+
+<div class="section">
+    <img src="C:/Users/yash/OneDrive/Desktop/yash/Synzon india/istockphoto-1005952222-612x612.jpg" alt="Key Business Area">
+    <div class="content">
+        <h2>Our Key Business Area</h2>
+        <p>Our core focus is on connecting clients with the best products in the nutraceutical industry. We leverage our extensive network and deep industry knowledge to source premium ingredients that meet stringent quality standards. By collaborating closely with manufacturers and suppliers, we ensure that our clients receive products that are not only effective but also safe and compliant with international regulations.</p>
+    </div>
+</div>
+
+<div class="section">
+    <img src="C:/Users/yash/OneDrive/Desktop/yash/Synzon india/istockphoto-1498442212-612x612.jpg" alt="Strategic Partnerships">
+    <div class="content">
+        <h2>Strategic Partnerships</h2>
+        <p>We are proud to be associated with our esteemed partner company, M/S JOINT CO. LTD., based in China. Through this strategic alliance with various renowned manufacturers, we have access to a wide range of top-quality products to offer our clients. This partnership enhances our capability to provide competitive pricing, timely delivery, and a diverse product portfolio that meets the evolving needs of the nutraceutical industry.</p>
+    </div>
+</div>
+
+<div class="section">
+    <img src="C:/Users/yash/OneDrive/Desktop/yash/Synzon india/istockphoto-866525434-612x612.jpg" alt="Commitment to Quality">
+    <div class="content">
+        <h2>Commitment to Quality and Service</h2>
+        <p>At Synzon India, quality is at the heart of everything we do. We are dedicated to providing you with the best quality products, outstanding services, and competitive prices. Our team of experienced professionals works tirelessly to ensure customer satisfaction at every step. From product selection to after-sales support, we are committed to exceeding your expectations and building long-lasting relationships based on trust and reliability.</p>
+    </div>
+</div>
+
+<div class="section">
+    <img src="C:/Users/yash/OneDrive/Desktop/yash/Synzon india/istockphoto-1410938025-612x612.jpg" alt="Why Choose Us">
+    <div class="content">
+        <h2>Why Choose Synzon India</h2>
+        <ul>
+            <li>Extensive Product Range: Access to a wide variety of nutraceutical supplements and excipients to cater to all your needs.</li>
+            <li>Quality Assurance: Products sourced from certified manufacturers adhering to global quality standards.</li>
+            <li>Competitive Pricing: Cost-effective solutions without compromising on quality.</li>
+            <li>Expert Support: A dedicated team to guide you through product selection, regulatory compliance, and logistical arrangements.</li>
+            <li>Timely Delivery: Efficient supply chain management to ensure your products reach you on time.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2023 Synzon India. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
