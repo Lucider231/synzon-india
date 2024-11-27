@@ -309,99 +309,103 @@
 </div>
 
 <style>
-    /* Content Sections */
+    /* General Section Styling */
     .section {
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 60px 40px;
-        margin: 20px auto;
-        background: linear-gradient(135deg, #edf2f7, #e2ecfc);
-        border-radius: 15px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        margin: 50px auto;
+        padding: 80px 50px;
+        background: linear-gradient(135deg, #fef6e4, #ffe4c4);
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        transform: scale(0.95) translateY(50px);
         opacity: 0;
-        transform: translateY(50px);
-        transition: all 0.6s ease-out;
+        transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
     }
     .section.appear {
+        transform: scale(1) translateY(0);
         opacity: 1;
-        transform: translateY(0);
-    }
-    .section img {
-        width: 35%;
-        border-radius: 15px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-    }
-    .section img:hover {
-        transform: scale(1.08);
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
     }
     .section:nth-child(even) {
         flex-direction: row-reverse;
     }
+
+    /* Content Styling */
     .content {
-        width: 55%;
+        position: relative;
+        width: 50%;
+        z-index: 2;
         padding: 20px;
-        text-align: justify;
     }
     .content h2 {
-        font-size: 32px;
-        color: #0E2841;
-        margin-bottom: 15px;
+        font-size: 36px;
+        font-weight: bold;
+        color: #d14124;
+        margin-bottom: 20px;
         text-transform: uppercase;
-        position: relative;
+        animation: slideIn 0.8s ease forwards;
     }
-    .content h2::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: -5px;
-        width: 60px;
-        height: 3px;
-        background-color: #f3722c;
-        border-radius: 2px;
-        transition: width 0.3s ease;
-    }
-    .content h2:hover::after {
-        width: 120px;
-    }
-    .content p {
+    .content p,
+    .content ul {
         font-size: 18px;
+        color: #4a4a4a;
         line-height: 1.8;
-        color: #333;
+        animation: fadeInUp 1s ease forwards;
     }
     .content ul {
-        list-style: none;
-        padding: 0;
-        margin: 20px 0;
+        margin-top: 15px;
     }
     .content ul li {
-        font-size: 18px;
-        color: #444;
+        position: relative;
         margin-bottom: 10px;
-        display: flex;
-        align-items: center;
     }
     .content ul li::before {
         content: "✔";
-        color: #0E2841;
-        margin-right: 10px;
-        font-size: 18px;
+        color: #d14124;
+        font-size: 16px;
+        position: absolute;
+        left: -25px;
+    }
+
+    /* Image Styling */
+    .section img {
+        width: 40%;
+        border-radius: 15px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        transform: scale(1.05);
+        animation: float 2.5s ease-in-out infinite;
     }
 
     /* Animations */
-    .section img, .content h2, .content p, .content ul {
-        animation: fadeIn 1s ease forwards;
-    }
-    @keyframes fadeIn {
+    @keyframes slideIn {
         from {
+            transform: translateX(-50%);
             opacity: 0;
-            transform: scale(0.95);
         }
         to {
+            transform: translateX(0);
             opacity: 1;
-            transform: scale(1);
+        }
+    }
+    @keyframes fadeInUp {
+        from {
+            transform: translateY(20px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0) scale(1.05);
+        }
+        50% {
+            transform: translateY(-10px) scale(1.08);
         }
     }
 </style>
