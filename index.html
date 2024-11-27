@@ -21,7 +21,7 @@
 }
 
 .featured-products h2 {
-    font-size: 28px; /* Heading font size remains the same */
+    font-size: 28px;
     color: #0e2841;
     margin-bottom: 20px;
     font-family: 'Roboto', sans-serif;
@@ -46,6 +46,7 @@
     padding: 15px;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Ensure content stays within the container */
 }
 
 .product img {
@@ -58,10 +59,15 @@
 }
 
 .product h3 {
-    font-size: 14px; /* Reduced from 16px to 14px */
+    font-size: 14px; /* Reduced font size */
     color: #333;
     margin-bottom: 0;
     font-family: 'Roboto', sans-serif;
+    width: 100%; /* Make the text fit within the container */
+    word-wrap: break-word; /* Break long words to avoid overflow */
+    text-align: center; /* Center-align text */
+    line-height: 1.2; /* Adjust line height for better spacing */
+    margin-top: 5px; /* Add spacing between text and image */
 }
 
 /* Hover Effects */
@@ -116,7 +122,7 @@
     }
 
     .product {
-        width: 150px; /* Container size adjusted for smaller screens */
+        width: 150px;
     }
 
     .product img {
