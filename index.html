@@ -31,10 +31,14 @@
 .product-carousel {
     display: flex;
     gap: 20px;
-    transition: transform 0.5s ease-in-out;
-    width: fit-content;
+    transition: transform 0.5s ease-in-out; /* Smooth scrolling */
+    will-change: transform; /* Optimize performance */
+}
+
+.featured-products {
+    overflow: hidden; /* Ensure only visible products are shown */
     position: relative;
-    left: 0;
+}
 }
 
 /* Product Cards */
@@ -825,33 +829,36 @@
         </div>
     </div>
 </footer>
-    <!-- JavaScript -->
-    <script>
-const carousel = document.querySelector('.product-carousel');
-const nextBtn = document.querySelector('.next-btn');
-const prevBtn = document.querySelector('.prev-btn');
+   <!-- Your other content and sections -->
+<script>
+    const carousel = document.querySelector('.product-carousel');
+    const nextBtn = document.querySelector('.next-btn');
+    const prevBtn = document.querySelector('.prev-btn');
 
-// Initialize position
-let currentPosition = 0;
+    let currentPosition = 0; // Current scroll position
+    const productWidth = 220; // Width of each product card including margin
+    const visibleProducts = Math.floor(carousel.parentElement.clientWidth / productWidth); // Number of visible products at a time
+    const totalProducts = carousel.children.length; // Total number of products
 
-// Event listeners for buttons
-nextBtn.addEventListener('click', () => {
-    const scrollAmount = carousel.clientWidth;
-    currentPosition -= scrollAmount;
-    if (Math.abs(currentPosition) >= carousel.scrollWidth - carousel.clientWidth) {
-        currentPosition = 0; // Reset to first slide when reaching the end
-    }
-    carousel.style.transform = `translateX(${currentPosition}px)`;
-});
+    // Event listener for next button
+    nextBtn.addEventListener('click', () => {
+        const maxScroll = (totalProducts - visibleProducts) * productWidth;
+        currentPosition -= productWidth;
+        if (Math.abs(currentPosition) > maxScroll) {
+            currentPosition = 0; // Reset to the start
+        }
+        carousel.style.transform = `translateX(${currentPosition}px)`;
+    });
 
-prevBtn.addEventListener('click', () => {
-    const scrollAmount = carousel.clientWidth;
-    currentPosition += scrollAmount;
-    if (currentPosition > 0) {
-        currentPosition = -(carousel.scrollWidth - carousel.clientWidth); // Jump to the last slide
-    }
-    carousel.style.transform = `translateX(${currentPosition}px)`;
-});
+    // Event listener for previous button
+    prevBtn.addEventListener('click', () => {
+        const maxScroll = (totalProducts - visibleProducts) * productWidth;
+        currentPosition += productWidth;
+        if (currentPosition > 0) {
+            currentPosition = -maxScroll; // Jump to the end
+        }
+        carousel.style.transform = `translateX(${currentPosition}px)`;
+    });
 </script>
 <!-- JavaScript -->
 <script>
