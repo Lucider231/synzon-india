@@ -20,6 +20,7 @@
             background-color: #ffffff;
             color: #333;
         }
+
         /* Navigation Bar */
         nav {
             background: #f7f7f7;
@@ -116,198 +117,6 @@
             transform: scaleX(1);
             transform-origin: left;
         }
-        nav ul li .dropdown-content {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: #ffffff;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            padding: 10px;
-            list-style: none;
-            border-radius: 5px;
-            min-width: 200px;
-        }
-        nav ul li:hover .dropdown-content {
-            display: block;
-        }
-        nav ul li .dropdown-content li {
-            margin: 5px 0;
-        }
-        nav ul li .dropdown-content li a {
-            color: #0B2F9F;
-            text-decoration: none;
-            font-size: 14px;
-        }
-        nav ul li .dropdown-content li a:hover {
-            color: #161D6F;
-        }
-
-        /* Animation Keyframes */
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-        @keyframes slideIn {
-            0% { transform: translateX(-50px); }
-            100% { transform: translateX(0); }
-        }
-
-        /* Hero Section */
-        .hero {
-            background-image: url('images/DALL·E 2024-10-20 07.43.28 - A detailed scientific representation of leaves intertwined with molecular structures, designed for the nutraceutical industry with a different pattern.webp');
-            height: 100vh;
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            position: relative;
-        }
-        .hero::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(rgba(11, 47, 159, 0.3), rgba(11, 47, 159, 0.3));
-        }
-        .hero h1 {
-            font-size: 50px;
-            margin-bottom: 20px;
-            position: relative;
-            z-index: 1;
-            color: #ffffff;
-        }
-        .hero p {
-            font-size: 22px;
-            margin-bottom: 40px;
-            position: relative;
-            z-index: 1;
-            color: #ffffff;
-        }
-        .hero .cta-btn {
-            background-color: #98DED9;
-            color: #0B2F9F;
-            padding: 12px 25px;
-            border: none;
-            cursor: pointer;
-            font-size: 18px;
-            border-radius: 25px;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-            position: relative;
-            z-index: 1;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-        .hero .cta-btn:hover {
-            background-color: #0B2F9F;
-            color: #ffffff;
-            box-shadow: 0 0 15px #0B2F9F;
-            transform: scale(1.15);
-        }
-
-        /* Single Search Bar Section */
-        .search-bar {
-            background-color: #ffffff;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            margin-top: -50px;
-            position: relative;
-            z-index: 5;
-            border-radius: 10px;
-            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-            width: 90%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .search-bar input {
-            width: 80%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            margin-right: 10px;
-            transition: transform 0.2s ease, border-color 0.3s ease;
-        }
-        .search-bar input:focus {
-            outline: none;
-            border-color: #0B2F9F;
-            transform: scale(1.05);
-        }
-        .search-bar button {
-            background-color: #161D6F;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-        .search-bar button:hover {
-            background-color: #0B2F9F;
-        }
-
-        /* Introduction Sections with Image */
-        .section {
-            display: flex;
-            align-items: center;
-            padding: 40px 20px;
-            background-color: #ffffff;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
-        }
-        .section.appear {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .section:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-        .section img {
-            max-width: 40%;
-            margin-right: 20px;
-            border-radius: 5px;
-        }
-        .section:nth-child(even) img {
-            margin-right: 0;
-            margin-left: 20px;
-        }
-        .section .content {
-            max-width: 60%;
-        }
-        .section h2 {
-            font-size: 36px;
-            color: #0E2841;
-            margin-bottom: 20px;
-        }
-        .section p {
-            font-size: 18px;
-            color: #333;
-            line-height: 1.6;
-        }
-        .section ul {
-            list-style-type: disc;
-            padding-left: 40px;
-            text-align: left;
-            margin-top: 20px;
-        }
-        .section ul li {
-            margin-bottom: 10px;
-            font-size: 18px;
-            color: #333;
-        }
-
-        /* Footer */
-        footer {
-            background: #f7f7f7;
-            color: #333;
-            padding: 10px;
-            text-align: center;
-            margin-top: 30px;
-        }
     </style>
 </head>
 <body>
@@ -323,24 +132,11 @@
         </div>
     </div>
     <ul>
-        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-        <li>
-            <a href="#"><i class="fas fa-box"></i> Products &#9662;</a>
-            <ul class="dropdown-content">
-                <li><a href="products.html#joint-support">Joint Support</a></li>
-                <li><a href="products.html#vitamins">Vitamins & Derivatives</a></li>
-                <li><a href="products.html#herbal-extracts">Herbal Extracts</a></li>
-                <li><a href="products.html#sport-nutrition">Sport Nutrition</a></li>
-                <li><a href="products.html#protein">Protein</a></li>
-                <li><a href="products.html#preservatives">Preservatives</a></li>
-                <li><a href="products.html#sweeteners">Sweeteners</a></li>
-                <li><a href="products.html#other-additives">Other Additives</a></li>
-            </ul>
-        </li>
-        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact Us</a></li>
+        <li><a href="#about-us">About Us</a></li>
+        <li><a href="#expertise">Our Expertise</a></li>
+        <li><a href="#key-business-area">Key Business</a></li>
     </ul>
 </nav>
-
 <!-- Hero Section -->
 <div class="hero">
     <div class="hero-content">
@@ -356,32 +152,129 @@
     <button>Search</button>
 </div>
 
-<!-- Content Sections with Images -->
-<div class="section">
-    <img src="images/istockphoto-1829520432-612x612.jpg" alt="Welcome">
+<style>
+    /* Hero Section */
+    .hero {
+        background-image: url('images/DALL·E 2024-10-20 07.43.28 - A detailed scientific representation of leaves intertwined with molecular structures, designed for the nutraceutical industry with a different pattern.webp');
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+    }
+    .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(rgba(11, 47, 159, 0.3), rgba(11, 47, 159, 0.3));
+    }
+    .hero h1 {
+        font-size: 50px;
+        margin-bottom: 20px;
+        position: relative;
+        z-index: 1;
+        color: #ffffff;
+    }
+    .hero p {
+        font-size: 22px;
+        margin-bottom: 40px;
+        position: relative;
+        z-index: 1;
+        color: #ffffff;
+    }
+    .hero .cta-btn {
+        background-color: #98DED9;
+        color: #0B2F9F;
+        padding: 12px 25px;
+        border: none;
+        cursor: pointer;
+        font-size: 18px;
+        border-radius: 25px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        position: relative;
+        z-index: 1;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .hero .cta-btn:hover {
+        background-color: #0B2F9F;
+        color: #ffffff;
+        box-shadow: 0 0 15px #0B2F9F;
+        transform: scale(1.15);
+    }
+
+    /* Single Search Bar Section */
+    .search-bar {
+        background-color: #ffffff;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        margin-top: -50px;
+        position: relative;
+        z-index: 5;
+        border-radius: 10px;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .search-bar input {
+        width: 80%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-right: 10px;
+        transition: transform 0.2s ease, border-color 0.3s ease;
+    }
+    .search-bar input:focus {
+        outline: none;
+        border-color: #0B2F9F;
+        transform: scale(1.05);
+    }
+    .search-bar button {
+        background-color: #161D6F;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+    .search-bar button:hover {
+        background-color: #0B2F9F;
+    }
+</style>
+<!-- Content Sections -->
+<div id="about-us" class="section">
+    <img src="images/istockphoto-1829520432-612x612.jpg" alt="Welcome to Synzon India">
     <div class="content">
         <h2>Welcome to Synzon India</h2>
         <p>Welcome to Synzon India, your trusted partner in the nutraceutical industry. We are committed to providing exceptional services that help our clients meet their requirements for high-quality nutraceutical supplements and excipients. With a focus on excellence and innovation, we aim to be the leading facilitator in connecting businesses with top-tier products and solutions.</p>
     </div>
 </div>
 
-<div class="section">
-    <img src="images/istockphoto-1442009211-640x640.jpg" alt="Expertise">
+<div id="expertise" class="section">
+    <img src="images/istockphoto-1442009211-640x640.jpg" alt="Our Expertise in Nutraceutical Solutions">
     <div class="content">
         <h2>Our Expertise in Nutraceutical Solutions</h2>
-        <p>At Synzon India, we specialize in bridging the gap between demand and supply in the nutraceutical sector. Our expertise lies in understanding the unique needs of our clients and delivering customized solutions that drive success. We offer a comprehensive range of products, including vitamins, minerals, herbal extracts, and specialty ingredients, ensuring that you have access to the finest quality supplements and excipients available in the market.</p>
+        <p>At Synzon India, we specialize in bridging the gap between demand and supply in the nutraceutical sector. Our expertise lies in understanding the unique needs of our clients and delivering customized solutions that drive success. We offer a comprehensive range of products, including vitamins, minerals, herbal extracts, and specialty ingredients, ensuring access to the finest quality supplements available in the market.</p>
     </div>
 </div>
 
-<div class="section">
+<div id="key-business-area" class="section">
     <img src="images/istockphoto-807490932-612x612.jpg" alt="Key Business Area">
     <div class="content">
         <h2>Our Key Business Area</h2>
-        <p>Our core focus is on connecting clients with the best products in the nutraceutical industry. We leverage our extensive network and deep industry knowledge to source premium ingredients that meet stringent quality standards. By collaborating closely with manufacturers and suppliers, we ensure that our clients receive products that are not only effective but also safe and compliant with international regulations.</p>
+        <p>Our core focus is on connecting clients with the best products in the nutraceutical industry. Leveraging our extensive network and deep industry knowledge, we source premium ingredients that meet stringent quality standards.</p>
     </div>
 </div>
 
-<div class="section">
+<div id="strategic-partnerships" class="section">
     <img src="images/istockphoto-1498442212-612x612.jpg" alt="Strategic Partnerships">
     <div class="content">
         <h2>Strategic Partnerships</h2>
@@ -389,15 +282,15 @@
     </div>
 </div>
 
-<div class="section">
-    <img src="images/istockphoto-866525434-612x612.jpg" alt="Commitment to Quality">
+<div id="quality-service" class="section">
+    <img src="images/istockphoto-866525434-612x612.jpg" alt="Commitment to Quality and Service">
     <div class="content">
         <h2>Commitment to Quality and Service</h2>
-        <p>At Synzon India, quality is at the heart of everything we do. We are dedicated to providing you with the best quality products, outstanding services, and competitive prices. Our team of experienced professionals works tirelessly to ensure customer satisfaction at every step. From product selection to after-sales support, we are committed to exceeding your expectations and building long-lasting relationships based on trust and reliability.</p>
+        <p>At Synzon India, quality is at the heart of everything we do. We are dedicated to providing you with the best quality products, outstanding services, and competitive prices. From product selection to after-sales support, we are committed to exceeding your expectations and building long-lasting relationships based on trust and reliability.</p>
     </div>
 </div>
 
-<div class="section">
+<div id="why-choose-us" class="section">
     <img src="images/istockphoto-1410938025-612x612.jpg" alt="Why Choose Us">
     <div class="content">
         <h2>Why Choose Synzon India</h2>
@@ -411,9 +304,63 @@
     </div>
 </div>
 
+<style>
+    /* Content Sections */
+    .section {
+        display: flex;
+        align-items: center;
+        padding: 50px 20px;
+        background-color: #ffffff;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+        margin: 20px auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .section.appear {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .section:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+    .section img {
+        max-width: 40%;
+        border-radius: 10px;
+        margin-right: 20px;
+    }
+    .section:nth-child(even) img {
+        margin-right: 0;
+        margin-left: 20px;
+    }
+    .section .content {
+        max-width: 60%;
+    }
+    .section h2 {
+        font-size: 28px;
+        color: #0E2841;
+        margin-bottom: 15px;
+    }
+    .section p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #555;
+    }
+    .section ul {
+        list-style: square;
+        padding-left: 20px;
+        margin-top: 15px;
+    }
+    .section ul li {
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 10px;
+    }
+</style>
 <!-- Footer -->
 <footer>
-    <p>&copy; 2023 Synzon India. All rights reserved.</p>
+    <p>&copy; 2024 Synzon India. All rights reserved.</p>
 </footer>
 
 <!-- JavaScript -->
@@ -448,6 +395,5 @@
         observer.observe(section);
     });
 </script>
-
 </body>
 </html>
