@@ -251,19 +251,19 @@
 </style>
 <!-- Content Sections -->
 <div id="about-us" class="section">
-    <img src="images/istockphoto-1829520432-612x612.jpg" alt="Welcome to Synzon India">
     <div class="content">
         <h2>Welcome to Synzon India</h2>
         <p>Welcome to Synzon India, your trusted partner in the nutraceutical industry. We are committed to providing exceptional services that help our clients meet their requirements for high-quality nutraceutical supplements and excipients. With a focus on excellence and innovation, we aim to be the leading facilitator in connecting businesses with top-tier products and solutions.</p>
     </div>
+    <img src="images/istockphoto-1829520432-612x612.jpg" alt="Welcome to Synzon India">
 </div>
 
 <div id="expertise" class="section">
-    <img src="images/istockphoto-1442009211-640x640.jpg" alt="Our Expertise in Nutraceutical Solutions">
     <div class="content">
         <h2>Our Expertise in Nutraceutical Solutions</h2>
         <p>At Synzon India, we specialize in bridging the gap between demand and supply in the nutraceutical sector. Our expertise lies in understanding the unique needs of our clients and delivering customized solutions that drive success. We offer a comprehensive range of products, including vitamins, minerals, herbal extracts, and specialty ingredients, ensuring access to the finest quality supplements available in the market.</p>
     </div>
+    <img src="images/istockphoto-1442009211-640x640.jpg" alt="Our Expertise in Nutraceutical Solutions">
 </div>
 
 <div id="key-business-area" class="section">
@@ -275,23 +275,26 @@
 </div>
 
 <div id="strategic-partnerships" class="section">
-    <img src="images/istockphoto-1498442212-612x612.jpg" alt="Strategic Partnerships">
     <div class="content">
         <h2>Strategic Partnerships</h2>
         <p>We are proud to be associated with our esteemed partner company, M/S JOINT CO. LTD., based in China. Through this strategic alliance with various renowned manufacturers, we have access to a wide range of top-quality products to offer our clients. This partnership enhances our capability to provide competitive pricing, timely delivery, and a diverse product portfolio that meets the evolving needs of the nutraceutical industry.</p>
     </div>
+    <img src="images/istockphoto-1498442212-612x612.jpg" alt="Strategic Partnerships">
 </div>
 
 <div id="quality-service" class="section">
     <img src="images/istockphoto-866525434-612x612.jpg" alt="Commitment to Quality and Service">
     <div class="content">
         <h2>Commitment to Quality and Service</h2>
-        <p>At Synzon India, quality is at the heart of everything we do. We are dedicated to providing you with the best quality products, outstanding services, and competitive prices. From product selection to after-sales support, we are committed to exceeding your expectations and building long-lasting relationships based on trust and reliability.</p>
+        <ul>
+            <li>Certified Manufacturers</li>
+            <li>Premium Ingredients</li>
+            <li>Timely Deliveries</li>
+        </ul>
     </div>
 </div>
 
 <div id="why-choose-us" class="section">
-    <img src="images/istockphoto-1410938025-612x612.jpg" alt="Why Choose Us">
     <div class="content">
         <h2>Why Choose Synzon India</h2>
         <ul>
@@ -302,60 +305,88 @@
             <li>Timely Delivery: Efficient supply chain management to ensure your products reach you on time.</li>
         </ul>
     </div>
+    <img src="images/istockphoto-1410938025-612x612.jpg" alt="Why Choose Us">
 </div>
 
 <style>
-    /* Content Sections */
+    /* Enhanced Content Sections */
     .section {
         display: flex;
         align-items: center;
-        padding: 50px 20px;
-        background-color: #ffffff;
-        opacity: 0;
-        transform: translateY(30px);
-        transition: opacity 0.8s ease, transform 0.8s ease;
+        justify-content: space-between;
+        padding: 60px 40px;
         margin: 20px auto;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        background-color: #f7f9fc;
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 0.6s ease-out;
     }
     .section.appear {
         opacity: 1;
         transform: translateY(0);
     }
+    .section img {
+        width: 35%;
+        border-radius: 15px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .section img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
     .section:nth-child(even) {
         flex-direction: row-reverse;
     }
-    .section img {
-        max-width: 40%;
-        border-radius: 10px;
-        margin-right: 20px;
+    .content {
+        width: 55%;
+        padding: 10px;
     }
-    .section:nth-child(even) img {
-        margin-right: 0;
-        margin-left: 20px;
-    }
-    .section .content {
-        max-width: 60%;
-    }
-    .section h2 {
+    .content h2 {
         font-size: 28px;
         color: #0E2841;
         margin-bottom: 15px;
+        position: relative;
+        overflow: hidden;
     }
-    .section p {
+    .content h2::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 50px;
+        height: 3px;
+        background-color: #0E2841;
+        border-radius: 2px;
+        transition: width 0.3s ease;
+    }
+    .content h2:hover::after {
+        width: 100px;
+    }
+    .content p {
         font-size: 16px;
-        line-height: 1.6;
-        color: #555;
+        line-height: 1.8;
+        color: #333;
+        margin-bottom: 15px;
     }
-    .section ul {
-        list-style: square;
-        padding-left: 20px;
-        margin-top: 15px;
+    .content ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
     }
-    .section ul li {
-        font-size: 16px;
-        color: #555;
+    .content ul li {
         margin-bottom: 10px;
+        font-size: 16px;
+        color: #444;
+        display: flex;
+        align-items: center;
+    }
+    .content ul li::before {
+        content: "✔";
+        color: #0E2841;
+        margin-right: 10px;
+        font-size: 14px;
     }
 </style>
 <!-- Footer -->
