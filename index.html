@@ -7,6 +7,7 @@
     <!-- Google Fonts for Roboto and Crushed -->
     <link href="https://fonts.googleapis.com/css2?family=Crushed&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM1te0w1dBw4kFWQu9zK5vAY5Wm8y1VslN9Rj" crossorigin="anonymous">
     <style>
@@ -358,6 +359,11 @@
 
 <!-- Content Sections -->
 <div id="about-us" class="section">
+    <div class="section-icon">
+        <a href="#about-us">
+            <i class="fas fa-info-circle"></i>
+        </a>
+    </div>
     <div class="content">
         <h2>Welcome to Synzon India</h2>
         <p>Welcome to Synzon India, your trusted partner in the nutraceutical industry. We are committed to providing exceptional services that help our clients meet their requirements for high-quality nutraceutical supplements and excipients. With a focus on excellence and innovation, we aim to be the leading facilitator in connecting businesses with top-tier products and solutions.</p>
@@ -366,6 +372,11 @@
 </div>
 
 <div id="expertise" class="section">
+    <div class="section-icon">
+        <a href="#expertise">
+            <i class="fas fa-lightbulb"></i>
+        </a>
+    </div>
     <img src="images/istockphoto-1442009211-640x640.jpg" alt="Our Expertise in Nutraceutical Solutions">
     <div class="content">
         <h2>Our Expertise in Nutraceutical Solutions</h2>
@@ -374,6 +385,11 @@
 </div>
 
 <div id="key-business-area" class="section">
+    <div class="section-icon">
+        <a href="#key-business-area">
+            <i class="fas fa-briefcase"></i>
+        </a>
+    </div>
     <div class="content">
         <h2>Our Key Business Area</h2>
         <p>Our core focus is on connecting clients with the best products in the nutraceutical industry. Leveraging our extensive network and deep industry knowledge, we source premium ingredients that meet stringent quality standards.</p>
@@ -382,6 +398,11 @@
 </div>
 
 <div id="strategic-partnerships" class="section">
+    <div class="section-icon">
+        <a href="#strategic-partnerships">
+            <i class="fas fa-handshake"></i>
+        </a>
+    </div>
     <img src="images/istockphoto-1498442212-612x612.jpg" alt="Strategic Partnerships">
     <div class="content">
         <h2>Strategic Partnerships</h2>
@@ -390,6 +411,11 @@
 </div>
 
 <div id="quality-service" class="section">
+    <div class="section-icon">
+        <a href="#quality-service">
+            <i class="fas fa-medal"></i>
+        </a>
+    </div>
     <div class="content">
         <h2>Commitment to Quality and Service</h2>
         <ul>
@@ -402,6 +428,11 @@
 </div>
 
 <div id="why-choose-us" class="section">
+    <div class="section-icon">
+        <a href="#why-choose-us">
+            <i class="fas fa-check-circle"></i>
+        </a>
+    </div>
     <img src="images/istockphoto-1410938025-612x612.jpg" alt="Why Choose Us">
     <div class="content">
         <h2>Why Choose Synzon India</h2>
@@ -416,69 +447,72 @@
 </div>
 
 <style>
-    /* General Section Styling */
+    /* Section General Styling */
     .section {
         position: relative;
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin: 50px auto;
-        padding: 80px 50px;
-        background: linear-gradient(135deg, #e3f6f5, #bae8e8);
+        padding: 60px 40px;
+        background: linear-gradient(135deg, #f5f7fa, #e8f4fa);
         border-radius: 20px;
-        overflow: hidden;
         box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
         opacity: 0;
         transform: scale(0.95) translateY(50px);
-        transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+        transition: all 0.8s ease;
     }
     .section.appear {
-        transform: scale(1) translateY(0);
         opacity: 1;
-    }
-    .section.appear-exit {
-        transform: scale(1.1) translateY(-20px);
-        opacity: 0;
+        transform: scale(1) translateY(0);
     }
     .section:nth-child(even) {
         flex-direction: row-reverse;
     }
 
+    /* Section Icon Styling */
+    .section-icon {
+        position: absolute;
+        top: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #ffffff;
+        padding: 15px;
+        border-radius: 50%;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        z-index: 5;
+    }
+    .section-icon a {
+        color: #2a9d8f;
+        font-size: 24px;
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+    .section-icon a:hover {
+        transform: scale(1.2);
+        color: #264653;
+    }
+
     /* Content Styling */
     .content {
-        position: relative;
         width: 50%;
-        z-index: 2;
-        padding: 20px;
     }
     .content h2 {
-        font-size: 36px;
-        font-weight: bold;
+        font-size: 32px;
         color: #2a9d8f;
-        margin-bottom: 20px;
-        text-transform: uppercase;
-        position: relative;
+        margin-bottom: 15px;
     }
     .content p,
     .content ul {
         font-size: 18px;
-        color: #264653;
         line-height: 1.8;
-        animation: fadeInUp 1s ease forwards;
+        color: #264653;
     }
     .content ul {
-        margin-top: 15px;
+        margin: 15px 0;
     }
     .content ul li {
-        position: relative;
         margin-bottom: 10px;
-    }
-    .content ul li::before {
-        content: "✔";
-        color: #2a9d8f;
-        font-size: 16px;
-        position: absolute;
-        left: -25px;
     }
 
     /* Image Styling */
@@ -486,48 +520,8 @@
         width: 40%;
         border-radius: 15px;
         box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-        transform: scale(1.05);
-        animation: float 2.5s ease-in-out infinite;
-    }
-
-    /* Animations */
-    @keyframes fadeInUp {
-        from {
-            transform: translateY(20px);
-            opacity: 0;
-        }
-        to {
-            transform: translateY(0);
-            opacity: 1;
-        }
-    }
-    @keyframes float {
-        0%, 100% {
-            transform: translateY(0) scale(1.05);
-        }
-        50% {
-            transform: translateY(-10px) scale(1.08);
-        }
     }
 </style>
-<script>
-    const sections = document.querySelectorAll('.section');
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('appear');
-                entry.target.classList.remove('appear-exit');
-            } else {
-                entry.target.classList.add('appear-exit');
-                entry.target.classList.remove('appear');
-            }
-        });
-    }, { threshold: 0.2 });
-
-    sections.forEach(section => {
-        observer.observe(section);
-    });
-</script>
 <!-- Footer -->
 <footer>
     <p>&copy; 2023 Synzon India. All rights reserved.</p>
