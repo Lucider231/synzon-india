@@ -14,55 +14,62 @@
 /* Featured Products Section */
 .featured-products {
     text-align: center;
-    padding: 40px 20px; /* Reduced padding */
-    background-color: #f4f4f4; /* Light background to contrast with the sections */
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    position: relative;
+    overflow: hidden;
 }
 
 .featured-products h2 {
-    font-size: 28px; /* Slightly smaller heading */
-    color: #0e2841; /* Same blue color as headings */
+    font-size: 28px;
+    color: #0e2841;
     margin-bottom: 20px;
     font-family: 'Roboto', sans-serif;
 }
 
-.products-container {
+/* Carousel Container */
+.product-carousel {
     display: flex;
-    justify-content: center;
-    gap: 20px; /* Reduced gap */
-    flex-wrap: wrap; /* Responsive layout */
+    gap: 20px;
+    transition: transform 0.5s ease-in-out;
+    width: fit-content;
+    position: relative;
+    left: 0;
 }
 
+/* Product Cards */
 .product {
     text-align: center;
-    max-width: 180px; /* Smaller container */
+    width: 180px;
     background: #ffffff;
     border-radius: 50%;
-    padding: 15px; /* Reduced padding */
+    padding: 15px;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .product img {
-    width: 100px; /* Smaller image size */
+    width: 100px;
     height: 100px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 10px; /* Reduced margin */
+    margin-bottom: 10px;
     transition: transform 0.3s ease;
 }
 
 .product h3 {
-    font-size: 16px; /* Smaller font for product title */
+    font-size: 16px;
     color: #333;
     margin-bottom: 5px;
     font-family: 'Roboto', sans-serif;
 }
 
 .product p {
-    font-size: 14px; /* Smaller font for price */
-    color: #2a9d8f; /* Green for price */
+    font-size: 14px;
+    color: #2a9d8f;
 }
 
+/* Hover Effects */
 .product:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
@@ -72,11 +79,54 @@
     transform: scale(1.1);
 }
 
+/* Navigation Buttons */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #0e2841;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background-color: #2a9d8f;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
-    .products-container {
-        flex-direction: column;
-        align-items: center;
+    .product-carousel {
+        gap: 15px;
+    }
+
+    .carousel-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+
+    .product {
+        width: 150px;
+    }
+
+    .product img {
+        width: 80px;
+        height: 80px;
     }
 }
 /* Footer General Styles */
@@ -511,26 +561,66 @@
 <!-- Featured Products Section -->
 <section class="featured-products">
     <h2>Featured Products</h2>
-    <div class="products-container">
+    <div class="product-carousel">
         <!-- Product 1 -->
         <div class="product">
-            <img src="images/Colllagen.webp" alt="Colllagen">
+            <img src="images/Collagen.jpg" alt="Collagen">
             <h3>Collagen Booster</h3>
             <p>$30</p>
         </div>
         <!-- Product 2 -->
         <div class="product">
-            <img src="images/Sulfate.webp" alt="Sulfate">
+            <img src="images/Sulfate.jpg" alt="Sulfate">
             <h3>Chondroitin Sulfate</h3>
             <p>$40</p>
         </div>
         <!-- Product 3 -->
         <div class="product">
-            <img src="images/Q10.webp" alt="Q10">
+            <img src="images/Q10.jpg" alt="Q10">
             <h3>Coenzyme Q10</h3>
             <p>$35</p>
         </div>
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="images/VitaminB1.jpg" alt="Vitamin B1">
+            <h3>Vitamin B1 (Thiamine HCL/Mono)</h3>
+            <p>$15</p>
+        </div>
+        <!-- Product 5 -->
+        <div class="product">
+            <img src="images/VitaminB5.jpg" alt="Vitamin B5">
+            <h3>Vitamin B5 (Calcium Pantothenate)</h3>
+            <p>$20</p>
+        </div>
+        <!-- Product 6 -->
+        <div class="product">
+            <img src="images/VitaminB6.jpg" alt="Vitamin B6">
+            <h3>Vitamin B6 (Pyridoxine)</h3>
+            <p>$18</p>
+        </div>
+        <!-- Product 7 -->
+        <div class="product">
+            <img src="images/GreenTeaExtract.jpg" alt="Green Tea Extract">
+            <h3>Green Tea Extract</h3>
+            <p>$25</p>
+        </div>
+        <!-- Product 8 -->
+        <div class="product">
+            <img src="images/Taurine.jpg" alt="Taurine">
+            <h3>Taurine</h3>
+            <p>$22</p>
+        </div>
+        <!-- Product 9 -->
+        <div class="product">
+            <img src="images/LCarnitine.jpg" alt="L-Carnitine">
+            <h3>L-Carnitine Variants</h3>
+            <p>$28</p>
+        </div>
     </div>
+
+    <!-- Navigation Buttons -->
+    <button class="carousel-btn prev-btn">&lt;</button>
+    <button class="carousel-btn next-btn">&gt;</button>
 </section>
 <!-- Content Sections -->
 <div id="about-us" class="section">
@@ -735,6 +825,34 @@
         </div>
     </div>
 </footer>
+    <!-- JavaScript -->
+    <script>
+const carousel = document.querySelector('.product-carousel');
+const nextBtn = document.querySelector('.next-btn');
+const prevBtn = document.querySelector('.prev-btn');
+
+// Initialize position
+let currentPosition = 0;
+
+// Event listeners for buttons
+nextBtn.addEventListener('click', () => {
+    const scrollAmount = carousel.clientWidth;
+    currentPosition -= scrollAmount;
+    if (Math.abs(currentPosition) >= carousel.scrollWidth - carousel.clientWidth) {
+        currentPosition = 0; // Reset to first slide when reaching the end
+    }
+    carousel.style.transform = `translateX(${currentPosition}px)`;
+});
+
+prevBtn.addEventListener('click', () => {
+    const scrollAmount = carousel.clientWidth;
+    currentPosition += scrollAmount;
+    if (currentPosition > 0) {
+        currentPosition = -(carousel.scrollWidth - carousel.clientWidth); // Jump to the last slide
+    }
+    carousel.style.transform = `translateX(${currentPosition}px)`;
+});
+</script>
 <!-- JavaScript -->
 <script>
     // Smooth scrolling for navigation links
