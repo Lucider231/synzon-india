@@ -17,16 +17,16 @@
         }
         body {
             font-family: Arial, sans-serif;
-            background-color: #ffffff; /* White background for a clean look */
+            background-color: #ffffff;
             color: #333;
         }
         /* Navigation Bar */
         nav {
-            background: #f7f7f7; /* Very light grey color for the navigation bar */
+            background: #f7f7f7;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 20px; /* Adjusted padding for a better look */
+            padding: 10px 20px;
             position: fixed;
             width: 100%;
             top: 0;
@@ -35,44 +35,55 @@
         nav .logo-text {
             display: flex;
             align-items: center;
-            padding: 5px 10px; /* Adding padding for a neat look */
+            padding: 5px 10px;
             border-radius: 8px;
             animation: fadeIn 3s ease-in-out;
         }
         nav .logo-text img {
-            width: 40px; /* Adjusted logo size */
+            width: 40px;
             height: 40px;
-            margin-right: 10px; /* Reduced margin to bring closer to separator */
+            margin-right: 10px;
             transition: transform 0.3s ease;
             animation: slideIn 3s ease-in-out;
         }
         nav .logo-text img:hover {
-            transform: scale(1.5); /* Increased zoom for hover effect */
+            transform: scale(1.5);
+        }
+        nav .logo-text img:active {
+            animation: spin 0.6s linear;
+        }
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
         }
         nav .separator {
             height: 50px;
             width: 2px;
-            background-color: #0E2841; /* Updated separator color */
+            background-color: #0E2841;
             margin: 0 10px;
         }
         nav .logo-text .company-name {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            font-family: 'Roboto', sans-serif; /* Changed to match the provided image font */
-            color: #0E2841; /* Updated font color */
+            font-family: 'Roboto', sans-serif;
+            color: #0E2841;
             animation: fadeIn 3s ease-in-out;
         }
         nav .company-name .synzon {
-            font-size: 24px; /* Adjusted font size for balance */
-            font-weight: bold;
-            text-transform: uppercase; /* Make it uppercase like in the image */
-        }
-        nav .company-name .india {
-            font-size: 20px; /* Slightly smaller for "India" */
+            font-size: 24px;
             font-weight: bold;
             text-transform: uppercase;
-            margin-top: -5px; /* Slight negative margin to bring "India" closer to "Synzon" */
+        }
+        nav .company-name .india {
+            font-size: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-top: -5px;
         }
         nav ul {
             display: flex;
@@ -83,13 +94,27 @@
             position: relative;
         }
         nav ul li a {
-            color: #333; /* Dark grey text for contrast on the light grey background */
+            color: #333;
             text-decoration: none;
-            font-size: 15px; /* Adjusted font size for better balance */
-            transition: color 0.3s ease;
+            font-size: 15px;
+            position: relative;
+            overflow: hidden;
         }
-        nav ul li a:hover {
-            color: #0E2841; /* Change to provided blue shade on hover */
+        nav ul li a::after {
+            content: "";
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #0E2841;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
+        nav ul li a:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
         }
         nav ul li .dropdown-content {
             display: none;
@@ -123,7 +148,6 @@
             0% { opacity: 0; }
             100% { opacity: 1; }
         }
-
         @keyframes slideIn {
             0% { transform: translateX(-50px); }
             100% { transform: translateX(0); }
@@ -180,12 +204,13 @@
         .hero .cta-btn:hover {
             background-color: #0B2F9F;
             color: #ffffff;
-            transform: scale(1.1);
+            box-shadow: 0 0 15px #0B2F9F;
+            transform: scale(1.15);
         }
 
         /* Single Search Bar Section */
         .search-bar {
-            background-color: #ffffff; /* White background for seamless appearance */
+            background-color: #ffffff;
             padding: 20px;
             display: flex;
             justify-content: center;
@@ -204,6 +229,12 @@
             border: 1px solid #ddd;
             border-radius: 5px;
             margin-right: 10px;
+            transition: transform 0.2s ease, border-color 0.3s ease;
+        }
+        .search-bar input:focus {
+            outline: none;
+            border-color: #0B2F9F;
+            transform: scale(1.05);
         }
         .search-bar button {
             background-color: #161D6F;
@@ -222,8 +253,15 @@
         .section {
             display: flex;
             align-items: center;
-            padding: 40px 20px; /* Further reduced padding for a narrower look */
-            background-color: #ffffff; /* Ensure consistent background */
+            padding: 40px 20px;
+            background-color: #ffffff;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .section.appear {
+            opacity: 1;
+            transform: translateY(0);
         }
         .section:nth-child(even) {
             flex-direction: row-reverse;
@@ -242,7 +280,7 @@
         }
         .section h2 {
             font-size: 36px;
-            color: #0E2841; /* Color for section headings */
+            color: #0E2841;
             margin-bottom: 20px;
         }
         .section p {
@@ -264,9 +302,9 @@
 
         /* Footer */
         footer {
-            background: #f7f7f7; /* Very light grey color for the footer */
+            background: #f7f7f7;
             color: #333;
-            padding: 10px; /* Reduced padding for a more compact footer */
+            padding: 10px;
             text-align: center;
             margin-top: 30px;
         }
@@ -276,7 +314,6 @@
 
 <!-- Navigation Bar -->
 <nav>
-    <nav id="navbar">
     <div class="logo-text">
         <img src="images/pixelcut-export.jpeg" alt="Synzon India Logo">
         <div class="separator"></div>
@@ -328,7 +365,6 @@
     </div>
 </div>
 
-<!-- Additional Content Sections -->
 <div class="section">
     <img src="images/istockphoto-1442009211-640x640.jpg" alt="Expertise">
     <div class="content">
@@ -379,6 +415,39 @@
 <footer>
     <p>&copy; 2023 Synzon India. All rights reserved.</p>
 </footer>
+
+<!-- JavaScript -->
+<script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+
+    // Intersection Observer for section animations
+    const sections = document.querySelectorAll('.section');
+    const observer = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('appear');
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.2 }
+    );
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+</script>
 
 </body>
 </html>
