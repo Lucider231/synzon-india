@@ -13,13 +13,14 @@
     <style>
 /* Footer General Styles */
 .site-footer {
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #e8f4fa; /* Light blue background */
+    color: #333; /* Dark gray font for contrast */
     padding: 40px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-top: 2px solid #ccc;
+    font-family: 'Roboto', sans-serif; /* Professional font */
 }
 
 .footer-container {
@@ -32,9 +33,9 @@
 
 /* Footer Sections */
 .footer-section h2, .footer-section h3 {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 24px;
-    color: #0056b3; /* Blue for headings */
+    color: #0e2841; /* Contrasting blue color for headings */
     margin-bottom: 15px;
 }
 
@@ -49,13 +50,13 @@
 
 .footer-section ul li a {
     text-decoration: none;
-    color: #000;
+    color: #0e2841; /* Contrasting blue for links */
     font-size: 16px;
     transition: color 0.3s ease;
 }
 
 .footer-section ul li a:hover {
-    color: #0056b3; /* Hover color */
+    color: #2a9d8f; /* Light green hover effect */
 }
 
 /* Sign-Up Form */
@@ -67,37 +68,43 @@
 
 .sign-up-form input[type="email"] {
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #0e2841;
     border-radius: 5px;
     font-size: 16px;
     width: 100%;
     box-sizing: border-box;
+    color: #333; /* Dark text for contrast */
+}
+
+.sign-up-form input[type="email"]::placeholder {
+    color: #aaa; /* Light gray placeholder */
 }
 
 .sign-up-form button {
     padding: 10px 20px;
     border: none;
     border-radius: 25px;
-    background-color: #000;
-    color: #fff;
+    background-color: #0e2841; /* Blue button */
+    color: #fff; /* White text */
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .sign-up-form button:hover {
-    background-color: #333;
+    background-color: #2a9d8f; /* Light green hover effect */
 }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #ffffff;
-            color: #333;
-        }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .footer-section {
+        margin-bottom: 20px;
+    }
+}
         /* Navigation Bar */
         nav {
             background: #f7f7f7;
@@ -599,14 +606,12 @@
         box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
     }
 </style>
-<!-- Other sections of your homepage -->
-
 <!-- Footer Section -->
 <footer class="site-footer">
     <div class="footer-container">
-        <!-- Site Title -->
+        <!-- Company Name -->
         <div class="footer-section">
-            <h2>Your Site Title</h2>
+            <h2>Synzon India</h2>
         </div>
 
         <!-- Explore Links -->
@@ -615,8 +620,7 @@
             <ul>
                 <li><a href="#about-us">About us</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="#shop">Shop</a></li>
-                <li><a href="#services">Services</a></li>
+                <li><a href="products.html">Products</a></li> <!-- Link updated to "Products" -->
             </ul>
         </div>
 
