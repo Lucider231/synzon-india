@@ -14,58 +14,58 @@
 /* Featured Products Section */
 .featured-products {
     text-align: center;
-    padding: 60px 20px;
+    padding: 40px 20px; /* Reduced padding */
     background-color: #f4f4f4; /* Light background to contrast with the sections */
 }
 
 .featured-products h2 {
-    font-size: 32px;
+    font-size: 28px; /* Slightly smaller heading */
     color: #0e2841; /* Same blue color as headings */
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-family: 'Roboto', sans-serif;
 }
 
 .products-container {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 20px; /* Reduced gap */
     flex-wrap: wrap; /* Responsive layout */
 }
 
 .product {
     text-align: center;
-    max-width: 250px;
+    max-width: 180px; /* Smaller container */
     background: #ffffff;
     border-radius: 50%;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px; /* Reduced padding */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .product img {
-    width: 100%;
-    height: auto;
+    width: 100px; /* Smaller image size */
+    height: 100px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 15px;
+    margin-bottom: 10px; /* Reduced margin */
     transition: transform 0.3s ease;
 }
 
 .product h3 {
-    font-size: 18px;
+    font-size: 16px; /* Smaller font for product title */
     color: #333;
     margin-bottom: 5px;
     font-family: 'Roboto', sans-serif;
 }
 
 .product p {
-    font-size: 16px;
+    font-size: 14px; /* Smaller font for price */
     color: #2a9d8f; /* Green for price */
 }
 
 .product:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .product img:hover {
@@ -514,19 +514,19 @@
     <div class="products-container">
         <!-- Product 1 -->
         <div class="product">
-            <img src="images/Colllagen.webp" alt="Colllagen">
+            <img src="images/Collagen.jpg" alt="Collagen">
             <h3>Collagen Booster</h3>
             <p>$30</p>
         </div>
         <!-- Product 2 -->
         <div class="product">
-            <img src="images/Sulfate.webp" alt="Sulfate">
+            <img src="images/Sulfate.jpg" alt="Sulfate">
             <h3>Chondroitin Sulfate</h3>
             <p>$40</p>
         </div>
         <!-- Product 3 -->
         <div class="product">
-            <img src="images/Q10.webp" alt="Q10">
+            <img src="images/Q10.jpg" alt="Q10">
             <h3>Coenzyme Q10</h3>
             <p>$35</p>
         </div>
