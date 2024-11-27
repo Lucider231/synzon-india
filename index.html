@@ -11,6 +11,85 @@
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM1te0w1dBw4kFWQu9zK5vAY5Wm8y1VslN9Rj" crossorigin="anonymous">
     <style>
+        <style>
+/* Footer General Styles */
+.site-footer {
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid #ccc;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* Footer Sections */
+.footer-section h2, .footer-section h3 {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    color: #0056b3; /* Blue for headings */
+    margin-bottom: 15px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #0056b3; /* Hover color */
+}
+
+/* Sign-Up Form */
+.sign-up-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sign-up-form input[type="email"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.sign-up-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sign-up-form button:hover {
+    background-color: #333;
+}
+</style>
         * {
             margin: 0;
             padding: 0;
@@ -522,11 +601,47 @@
         box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
     }
 </style>
-<!-- Footer -->
-<footer>
-    <p>&copy; 2023 Synzon India. All rights reserved.</p>
-</footer>
+<!-- Other sections of your homepage -->
 
+<!-- Footer Section -->
+<footer class="site-footer">
+    <div class="footer-container">
+        <!-- Site Title -->
+        <div class="footer-section">
+            <h2>Your Site Title</h2>
+        </div>
+
+        <!-- Explore Links -->
+        <div class="footer-section">
+            <h3>Explore</h3>
+            <ul>
+                <li><a href="#about-us">About us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#services">Services</a></li>
+            </ul>
+        </div>
+
+        <!-- Follow Us Links -->
+        <div class="footer-section">
+            <h3>Follow us</h3>
+            <ul>
+                <li><a href="mailto:email@example.com">Email</a></li>
+                <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+                <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+            </ul>
+        </div>
+
+        <!-- Sign Up Form -->
+        <div class="footer-section">
+            <h3>Sign up with your email address to receive news and updates.</h3>
+            <form action="#" method="post" class="sign-up-form">
+                <input type="email" name="email" placeholder="Email Address" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+</footer>
 <!-- JavaScript -->
 <script>
     // Smooth scrolling for navigation links
