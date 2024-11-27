@@ -317,17 +317,21 @@
         justify-content: space-between;
         margin: 50px auto;
         padding: 80px 50px;
-        background: linear-gradient(135deg, #fef6e4, #ffe4c4);
+        background: linear-gradient(135deg, #e3f6f5, #bae8e8);
         border-radius: 20px;
         overflow: hidden;
         box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-        transform: scale(0.95) translateY(50px);
         opacity: 0;
+        transform: scale(0.95) translateY(50px);
         transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
     }
     .section.appear {
         transform: scale(1) translateY(0);
         opacity: 1;
+    }
+    .section.appear-exit {
+        transform: scale(1.1) translateY(-20px);
+        opacity: 0;
     }
     .section:nth-child(even) {
         flex-direction: row-reverse;
@@ -343,15 +347,15 @@
     .content h2 {
         font-size: 36px;
         font-weight: bold;
-        color: #d14124;
+        color: #2a9d8f;
         margin-bottom: 20px;
         text-transform: uppercase;
-        animation: slideIn 0.8s ease forwards;
+        position: relative;
     }
     .content p,
     .content ul {
         font-size: 18px;
-        color: #4a4a4a;
+        color: #264653;
         line-height: 1.8;
         animation: fadeInUp 1s ease forwards;
     }
@@ -364,7 +368,7 @@
     }
     .content ul li::before {
         content: "✔";
-        color: #d14124;
+        color: #2a9d8f;
         font-size: 16px;
         position: absolute;
         left: -25px;
@@ -380,16 +384,6 @@
     }
 
     /* Animations */
-    @keyframes slideIn {
-        from {
-            transform: translateX(-50%);
-            opacity: 0;
-        }
-        to {
-            transform: translateX(0);
-            opacity: 1;
-        }
-    }
     @keyframes fadeInUp {
         from {
             transform: translateY(20px);
@@ -409,6 +403,24 @@
         }
     }
 </style>
+<script>
+    const sections = document.querySelectorAll('.section');
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('appear');
+                entry.target.classList.remove('appear-exit');
+            } else {
+                entry.target.classList.add('appear-exit');
+                entry.target.classList.remove('appear');
+            }
+        });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+</script>
 <!-- JavaScript -->
 <script>
     // Smooth scrolling for navigation links
