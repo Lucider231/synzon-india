@@ -21,7 +21,7 @@
 }
 
 .featured-products h2 {
-    font-size: 28px;
+    font-size: 28px; /* Heading font size remains the same */
     color: #0e2841;
     margin-bottom: 20px;
     font-family: 'Roboto', sans-serif;
@@ -40,7 +40,7 @@
 /* Product Cards */
 .product {
     text-align: center;
-    width: 180px;
+    width: 180px; /* Container size remains unchanged */
     background: #ffffff;
     border-radius: 50%;
     padding: 15px;
@@ -49,8 +49,8 @@
 }
 
 .product img {
-    width: 100px;
-    height: 100px;
+    width: 120px; /* Increased from 100px to 120px */
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 10px;
@@ -58,9 +58,9 @@
 }
 
 .product h3 {
-    font-size: 16px;
+    font-size: 14px; /* Reduced from 16px to 14px */
     color: #333;
-    margin-bottom: 0; /* Removed margin related to price */
+    margin-bottom: 0;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -116,12 +116,16 @@
     }
 
     .product {
-        width: 150px;
+        width: 150px; /* Container size adjusted for smaller screens */
     }
 
     .product img {
-        width: 80px;
-        height: 80px;
+        width: 100px; /* Proportional to reduced container size */
+        height: 100px;
+    }
+
+    .product h3 {
+        font-size: 12px; /* Adjusted font size for smaller screens */
     }
 }
 /* Footer General Styles */
