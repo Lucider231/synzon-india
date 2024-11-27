@@ -31,14 +31,10 @@
 .product-carousel {
     display: flex;
     gap: 20px;
-    transition: transform 0.5s ease-in-out; /* Smooth scrolling */
-    will-change: transform; /* Optimize performance */
-}
-
-.featured-products {
-    overflow: hidden; /* Ensure only visible products are shown */
+    transition: transform 0.5s ease-in-out;
+    width: fit-content;
     position: relative;
-}
+    left: 0;
 }
 
 /* Product Cards */
