@@ -259,31 +259,30 @@
 </div>
 
 <div id="expertise" class="section">
+    <img src="images/istockphoto-1442009211-640x640.jpg" alt="Our Expertise in Nutraceutical Solutions">
     <div class="content">
         <h2>Our Expertise in Nutraceutical Solutions</h2>
         <p>At Synzon India, we specialize in bridging the gap between demand and supply in the nutraceutical sector. Our expertise lies in understanding the unique needs of our clients and delivering customized solutions that drive success. We offer a comprehensive range of products, including vitamins, minerals, herbal extracts, and specialty ingredients, ensuring access to the finest quality supplements available in the market.</p>
     </div>
-    <img src="images/istockphoto-1442009211-640x640.jpg" alt="Our Expertise in Nutraceutical Solutions">
 </div>
 
 <div id="key-business-area" class="section">
-    <img src="images/istockphoto-807490932-612x612.jpg" alt="Key Business Area">
     <div class="content">
         <h2>Our Key Business Area</h2>
         <p>Our core focus is on connecting clients with the best products in the nutraceutical industry. Leveraging our extensive network and deep industry knowledge, we source premium ingredients that meet stringent quality standards.</p>
     </div>
+    <img src="images/istockphoto-807490932-612x612.jpg" alt="Key Business Area">
 </div>
 
 <div id="strategic-partnerships" class="section">
+    <img src="images/istockphoto-1498442212-612x612.jpg" alt="Strategic Partnerships">
     <div class="content">
         <h2>Strategic Partnerships</h2>
         <p>We are proud to be associated with our esteemed partner company, M/S JOINT CO. LTD., based in China. Through this strategic alliance with various renowned manufacturers, we have access to a wide range of top-quality products to offer our clients. This partnership enhances our capability to provide competitive pricing, timely delivery, and a diverse product portfolio that meets the evolving needs of the nutraceutical industry.</p>
     </div>
-    <img src="images/istockphoto-1498442212-612x612.jpg" alt="Strategic Partnerships">
 </div>
 
 <div id="quality-service" class="section">
-    <img src="images/istockphoto-866525434-612x612.jpg" alt="Commitment to Quality and Service">
     <div class="content">
         <h2>Commitment to Quality and Service</h2>
         <ul>
@@ -292,9 +291,11 @@
             <li>Timely Deliveries</li>
         </ul>
     </div>
+    <img src="images/istockphoto-866525434-612x612.jpg" alt="Commitment to Quality and Service">
 </div>
 
 <div id="why-choose-us" class="section">
+    <img src="images/istockphoto-1410938025-612x612.jpg" alt="Why Choose Us">
     <div class="content">
         <h2>Why Choose Synzon India</h2>
         <ul>
@@ -305,18 +306,17 @@
             <li>Timely Delivery: Efficient supply chain management to ensure your products reach you on time.</li>
         </ul>
     </div>
-    <img src="images/istockphoto-1410938025-612x612.jpg" alt="Why Choose Us">
 </div>
 
 <style>
-    /* Enhanced Content Sections */
+    /* Content Sections */
     .section {
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 60px 40px;
         margin: 20px auto;
-        background-color: #f7f9fc;
+        background: linear-gradient(135deg, #edf2f7, #e2ecfc);
         border-radius: 15px;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         opacity: 0;
@@ -331,54 +331,55 @@
         width: 35%;
         border-radius: 15px;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     }
     .section img:hover {
-        transform: scale(1.05);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        transform: scale(1.08);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
     }
     .section:nth-child(even) {
         flex-direction: row-reverse;
     }
     .content {
         width: 55%;
-        padding: 10px;
+        padding: 20px;
+        text-align: justify;
     }
     .content h2 {
-        font-size: 28px;
+        font-size: 32px;
         color: #0E2841;
         margin-bottom: 15px;
+        text-transform: uppercase;
         position: relative;
-        overflow: hidden;
     }
     .content h2::after {
         content: "";
         position: absolute;
         left: 0;
         bottom: -5px;
-        width: 50px;
+        width: 60px;
         height: 3px;
-        background-color: #0E2841;
+        background-color: #f3722c;
         border-radius: 2px;
         transition: width 0.3s ease;
     }
     .content h2:hover::after {
-        width: 100px;
+        width: 120px;
     }
     .content p {
-        font-size: 16px;
+        font-size: 18px;
         line-height: 1.8;
         color: #333;
-        margin-bottom: 15px;
     }
     .content ul {
         list-style: none;
         padding: 0;
-        margin: 0;
+        margin: 20px 0;
     }
     .content ul li {
-        margin-bottom: 10px;
-        font-size: 16px;
+        font-size: 18px;
         color: #444;
+        margin-bottom: 10px;
         display: flex;
         align-items: center;
     }
@@ -386,14 +387,24 @@
         content: "✔";
         color: #0E2841;
         margin-right: 10px;
-        font-size: 14px;
+        font-size: 18px;
+    }
+
+    /* Animations */
+    .section img, .content h2, .content p, .content ul {
+        animation: fadeIn 1s ease forwards;
+    }
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: scale(0.95);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
     }
 </style>
-<!-- Footer -->
-<footer>
-    <p>&copy; 2024 Synzon India. All rights reserved.</p>
-</footer>
-
 <!-- JavaScript -->
 <script>
     // Smooth scrolling for navigation links
