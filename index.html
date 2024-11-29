@@ -814,9 +814,10 @@
     color: #264653;
 }
 
-/* Third Heading */
+/* Third Heading: Image Background with Enhanced Text Visibility */
 .third-heading {
-    background-image: url('images/istockphoto-807490932-612x612.jpg'); /* Replace with actual image */
+    position: relative;
+    background-image: url('images/istockphoto-807490932-612x612.jpg'); /* Replace with your image path */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -824,24 +825,30 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
     text-align: center;
+    color: #ffffff; /* Light text color */
 }
+
 .third-heading .content-overlay {
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+    background-color: rgba(0, 0, 0, 0.7); /* Increased opacity for better contrast */
     padding: 30px;
     border-radius: 15px;
     max-width: 600px;
 }
+
 .third-heading h2 {
     font-size: 28px;
     margin-bottom: 15px;
+    color: #ffffff; /* Ensure the text color is white */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Add shadow for better readability */
 }
+
 .third-heading p {
     font-size: 16px;
     line-height: 1.6;
+    color: #f0f0f0; /* Slightly off-white for subtle contrast */
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7); /* Text shadow for readability */
 }
-
 /* Fourth Heading */
 .fourth-heading {
     background-color: #f4f8fb;
