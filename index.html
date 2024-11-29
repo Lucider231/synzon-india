@@ -710,29 +710,24 @@
     </div>
 </div>
 
-<div id="key-business-area" class="section">
-    <div class="section-icon">
-        <a href="#key-business-area">
-            <i class="fas fa-briefcase"></i>
-        </a>
-    </div>
-    <div class="content">
+<div id="key-business-area" class="section third-heading">
+    <div class="content-overlay">
         <h2>Our Key Business Area</h2>
         <p>Our core focus is on connecting clients with the best products in the nutraceutical industry. Leveraging our extensive network and deep industry knowledge, we source premium ingredients that meet stringent quality standards.</p>
     </div>
-    <img src="images/istockphoto-807490932-612x612.jpg" alt="Key Business Area">
 </div>
 
-<div id="strategic-partnerships" class="section">
-    <div class="section-icon">
-        <a href="#strategic-partnerships">
-            <i class="fas fa-handshake"></i>
-        </a>
-    </div>
-    <img src="images/istockphoto-1498442212-612x612.jpg" alt="Strategic Partnerships">
-    <div class="content">
-        <h2>Strategic Partnerships</h2>
-        <p>We are proud to be associated with our esteemed partner company, M/S JOINT CO. LTD., based in China. Through this strategic alliance with various renowned manufacturers, we have access to a wide range of top-quality products to offer our clients. This partnership enhances our capability to provide competitive pricing, timely delivery, and a diverse product portfolio that meets the evolving needs of the nutraceutical industry.</p>
+<div id="strategic-partnerships" class="section fourth-heading">
+    <div class="fourth-content">
+        <div class="fourth-text">
+            <h3>About Our Partnerships</h3>
+            <h2>M/S JOINT CO. LTD.</h2>
+            <p>We are proud to be associated with our esteemed partner company, M/S JOINT CO. LTD., based in China. Through this strategic alliance with various renowned manufacturers, we have access to a wide range of top-quality products to offer our clients. This partnership enhances our capability to provide competitive pricing, timely delivery, and a diverse product portfolio that meets the evolving needs of the nutraceutical industry.</p>
+            <a href="#learn-more" class="learn-more-link">Learn More ></a>
+        </div>
+        <div class="fourth-image">
+            <img src="images/partnership.jpg" alt="Strategic Partnerships"> <!-- Replace with actual image -->
+        </div>
     </div>
 </div>
 
@@ -773,80 +768,127 @@
 </div>
 
 <style>
-    /* Section General Styling */
-    .section {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin: 50px auto;
-        padding: 60px 40px;
-        background: linear-gradient(135deg, #f5f7fa, #e8f4fa);
-        border-radius: 20px;
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-        opacity: 0;
-        transform: scale(0.95) translateY(50px);
-        transition: all 0.8s ease;
-    }
-    .section.appear {
-        opacity: 1;
-        transform: scale(1) translateY(0);
-    }
-    .section:nth-child(even) {
-        flex-direction: row-reverse;
-    }
+/* General Section Styling */
+.section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px auto;
+    padding: 60px 40px;
+    background: linear-gradient(135deg, #f5f7fa, #e8f4fa);
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    opacity: 0;
+    transform: scale(0.95) translateY(50px);
+    transition: all 0.8s ease;
+}
+.section.appear {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+.section:nth-child(even) {
+    flex-direction: row-reverse;
+}
 
-    /* Section Icon Styling */
-    .section-icon {
-        position: absolute;
-        top: -40px;
-        left: 50%;
-        transform: translateX(-50%);
-        background: #ffffff;
-        padding: 15px;
-        border-radius: 50%;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        z-index: 5;
-    }
-    .section-icon a {
-        color: #2a9d8f;
-        font-size: 24px;
-        transition: transform 0.3s ease, color 0.3s ease;
-    }
-    .section-icon a:hover {
-        transform: scale(1.2);
-        color: #264653;
-    }
+/* Icon Styling */
+.section-icon {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 5;
+}
+.section-icon a {
+    color: #2a9d8f;
+    font-size: 24px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.section-icon a:hover {
+    transform: scale(1.2);
+    color: #264653;
+}
 
-    /* Content Styling */
-    .content {
-        width: 50%;
-    }
-    .content h2 {
-        font-size: 32px;
-        color: #2a9d8f;
-        margin-bottom: 15px;
-    }
-    .content p,
-    .content ul {
-        font-size: 18px;
-        line-height: 1.8;
-        color: #264653;
-    }
-    .content ul {
-        margin: 15px 0;
-    }
-    .content ul li {
-        margin-bottom: 10px;
-    }
+/* Third Heading */
+.third-heading {
+    background-image: url('images/third-heading-bg.jpg'); /* Replace with actual image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+.third-heading .content-overlay {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 600px;
+}
+.third-heading h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+.third-heading p {
+    font-size: 16px;
+    line-height: 1.6;
+}
 
-    /* Image Styling */
-    .section img {
-        width: 40%;
-        border-radius: 15px;
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-    }
+/* Fourth Heading */
+.fourth-heading {
+    background-color: #f4f8fb;
+    padding: 60px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fourth-content {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.fourth-text {
+    flex: 1;
+    text-align: left;
+    color: #0e2841;
+}
+.fourth-text h3 {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #2a9d8f;
+    margin-bottom: 10px;
+}
+.fourth-text h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+.fourth-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.fourth-text .learn-more-link {
+    text-decoration: none;
+    color: #0e2841;
+    font-weight: bold;
+    border-bottom: 1px solid #0e2841;
+}
+.fourth-image img {
+    max-width: 100%;
+    border-radius: 15px;
+}
 </style>
 <!-- Footer Section -->
 <footer class="site-footer">
