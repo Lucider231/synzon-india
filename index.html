@@ -731,55 +731,62 @@
     </div>
 </div>
 
-<!-- Last Two Headings -->
+<!-- Interactive Section Container -->
+<div class="interactive-container">
+    <!-- Commitment to Quality and Service -->
+    <div id="quality-service" class="interactive-section">
+        <div class="image-container creative-position">
+            <img src="images/istockphoto-866525434-612x612.jpg" alt="Commitment to Quality and Service">
+            <h2 class="section-heading">Commitment to Quality</h2>
+        </div>
+        <div class="hidden-content">
+            <h2>Commitment to Quality and Service</h2>
+            <ul>
+                <li>Certified Manufacturers</li>
+                <li>Premium Ingredients</li>
+                <li>Timely Deliveries</li>
+            </ul>
+        </div>
+    </div>
 
-<!-- Commitment to Quality and Service -->
-<div id="quality-service" class="interactive-section">
-    <div class="image-container creative-position">
-        <img src="images/istockphoto-866525434-612x612.jpg" alt="Commitment to Quality and Service">
-        <h2 class="section-heading">Commitment to Quality</h2>
-    </div>
-    <div class="hidden-content">
-        <h2>Commitment to Quality and Service</h2>
-        <ul>
-            <li>Certified Manufacturers</li>
-            <li>Premium Ingredients</li>
-            <li>Timely Deliveries</li>
-        </ul>
-    </div>
-</div>
-
-<!-- Why Choose Synzon India -->
-<div id="why-choose-us" class="interactive-section">
-    <div class="image-container creative-position reverse">
-        <img src="images/istockphoto-1410938025-612x612.jpg" alt="Why Choose Us">
-        <h2 class="section-heading">Why Choose Us?</h2>
-    </div>
-    <div class="hidden-content">
-        <h2>Why Choose Synzon India</h2>
-        <ul>
-            <li>Extensive Product Range: Access to a wide variety of nutraceutical supplements and excipients to cater to all your needs.</li>
-            <li>Quality Assurance: Products sourced from certified manufacturers adhering to global quality standards.</li>
-            <li>Competitive Pricing: Cost-effective solutions without compromising on quality.</li>
-            <li>Expert Support: A dedicated team to guide you through product selection, regulatory compliance, and logistical arrangements.</li>
-            <li>Timely Delivery: Efficient supply chain management to ensure your products reach you on time.</li>
-        </ul>
+    <!-- Why Choose Synzon India -->
+    <div id="why-choose-us" class="interactive-section">
+        <div class="image-container creative-position reverse">
+            <img src="images/istockphoto-1410938025-612x612.jpg" alt="Why Choose Us">
+            <h2 class="section-heading">Why Choose Us?</h2>
+        </div>
+        <div class="hidden-content">
+            <h2>Why Choose Synzon India</h2>
+            <ul>
+                <li><b>Extensive Product Range:</b> Access to a wide variety of nutraceutical supplements and excipients to cater to all your needs.</li>
+                <li><b>Quality Assurance:</b> Products sourced from certified manufacturers adhering to global quality standards.</li>
+                <li><b>Competitive Pricing:</b> Cost-effective solutions without compromising on quality.</li>
+                <li>Expert Support: A dedicated team to guide you through product selection, regulatory compliance, and logistical arrangements.</li>
+                <li>Timely Delivery: Efficient supply chain management to ensure your products reach you on time.</li>
+            </ul>
+        </div>
     </div>
 </div>
       
 <style>
+/* Container for Side-by-Side Layout */
+.interactive-container {
+    display: flex;
+    gap: 30px; /* Space between the sections */
+    justify-content: center;
+    align-items: flex-start;
+    margin: 60px auto;
+    flex-wrap: wrap; /* Ensure it adjusts on smaller screens */
+}
+
 /* General Interactive Section Styling */
 .interactive-section {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 60px auto;
-    width: 90%;
-    max-width: 900px;
+    width: 45%; /* Adjust width to fit two items side-by-side */
     cursor: pointer;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 20px;
 }
 
 .interactive-section:hover {
@@ -797,12 +804,12 @@
 }
 
 .creative-position {
-    transform: rotate(-3deg) translateX(-20px);
+    transform: rotate(-3deg);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
 .creative-position.reverse {
-    transform: rotate(3deg) translateX(20px);
+    transform: rotate(3deg);
 }
 
 .image-container img {
@@ -881,7 +888,15 @@
 .interactive-section:active .image-container img {
     filter: blur(4px);
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .interactive-section {
+        width: 100%; /* Stack items vertically on smaller screens */
+    }
+}
 </style>
+
       
 <style>
 /* General Section Styling */
