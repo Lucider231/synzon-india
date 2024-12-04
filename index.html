@@ -768,6 +768,46 @@
         </div>
     </div>
 </div>
+      
+<style>
+/* General Section Background Styling */
+.section-background {
+    background-color: #f4f8fb; /* Light blueish-grey that contrasts well with a hero image */
+    padding: 60px 20px; /* Add some padding to enhance spacing */
+    margin: 0; /* Ensure no additional margins create gaps */
+}
+
+/* Section Container to Remove Gaps */
+.section-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Uniform spacing between sections */
+}
+
+/* Ensure Consistent Padding Between Sections */
+.section {
+    padding: 50px 30px; /* Consistent inner padding */
+    background: #ffffff; /* White background for the content area */
+    border-radius: 15px; /* Slight rounding for aesthetics */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 0 auto;
+    max-width: 1200px; /* Keep content centered and within a readable width */
+}
+
+/* Transition Between Sections */
+.section::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 50px; /* Transition effect between sections */
+    background: linear-gradient(to bottom, #f4f8fb, #ffffff); /* Smooth gradient */
+}
+
+/* For Smooth Transitions Between Section Backgrounds */
+.section-background.gradient-transition {
+    background: linear-gradient(to bottom, #f4f8fb, #ffffff);
+}
+</style>
 
       
 <style>
