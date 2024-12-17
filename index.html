@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-      <!-- Structured Data for SEO -->
+    <!-- Structured Data for SEO -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -30,560 +30,822 @@
     <!-- Open Graph Meta Tags for Social Media -->
     <meta property="og:title" content="Synzon India - Your Trusted Nutraceutical Partner">
     <meta property="og:description" content="Discover a wide range of nutraceutical products for your health and wellness needs.">
-    <meta property="og:image" content="images/synzon-logo.jpg"> <!-- Update with your logo path -->
-    <meta property="og:url" content="https://yourwebsite.com"> <!-- Replace with your website URL -->
+    <meta property="og:image" content="images/synzon-logo.jpg">
+    <meta property="og:url" content="https://yourwebsite.com">
     <meta property="og:type" content="website">
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Synzon India - Your Trusted Nutraceutical Partner">
     <meta name="twitter:description" content="Explore high-quality nutraceutical products for better health.">
-    <meta name="twitter:image" content="images/synzon-logo.jpg"><!-- Update with your logo path -->
-   
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="twitter:image" content="images/synzon-logo.jpg">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Synzon India - Your Trusted Nutraceutical Partner</title>
     <!-- Google Fonts for Roboto and Crushed -->
     <link href="https://fonts.googleapis.com/css2?family=Crushed&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM1te0w1dBw4kFWQu9zK5vAY5Wm8y1VslN9Rj" crossorigin="anonymous">
    
-<style>
-/* Content Section Background */
-.section-background {
-    background-color: #f4f8fb; /* Set a light, consistent background color */
-    padding: 50px 0; /* Add some padding for spacing */
-    margin: 0; /* Remove unnecessary margins */
-}
-
-/* General Section Styling */
-.section-container {
-    display: flex;
-    flex-direction: column;
-    gap: 50px; /* Uniform spacing between sections */
-}
-
-/* Individual Sections */
-.section {
-    padding: 50px 30px; /* Consistent padding inside sections */
-    background: #ffffff; /* Keep the sections white for contrast */
-    margin: 0 auto; /* Center-align sections */
-    border-radius: 15px; /* Subtle rounding for a clean look */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
-    max-width: 1200px; /* Keep content readable and centered */
-}
-</style>
-      
-
-      <style>
-/* Featured Products Section */
-.featured-products {
-    text-align: center;
-    padding: 40px 20px;
-    background-color: #f4f4f4;
-    position: relative;
-    overflow: hidden;
-}
-
-.featured-products h2 {
-    font-size: 28px;
-    color: #0e2841;
-    margin-bottom: 20px;
-    font-family: 'Roboto', sans-serif;
-}
-
-/* Carousel Container */
-.product-carousel {
-    display: flex;
-    gap: 20px;
-    transition: transform 0.5s ease-in-out;
-    width: fit-content;
-    position: relative;
-    left: 0;
-}
-
-/* Product Cards */
-.product {
-    text-align: center;
-    width: 180px; /* Container size remains unchanged */
-    background: #ffffff;
-    border-radius: 50%;
-    padding: 15px;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden; /* Ensure content stays within the container */
-}
-
-.product img {
-    width: 120px; /* Increased from 100px to 120px */
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 10px;
-    transition: transform 0.3s ease;
-}
-
-.product h3 {
-    font-size: 14px; /* Reduced font size */
-    color: #333;
-    margin-bottom: 0;
-    font-family: 'Roboto', sans-serif;
-    width: 100%; /* Make the text fit within the container */
-    word-wrap: break-word; /* Break long words to avoid overflow */
-    text-align: center; /* Center-align text */
-    line-height: 1.2; /* Adjust line height for better spacing */
-    margin-top: 5px; /* Add spacing between text and image */
-}
-
-/* Hover Effects */
-.product:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
-
-.product img:hover {
-    transform: scale(1.1);
-}
-
-/* Navigation Buttons */
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #0e2841;
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    font-size: 18px;
-    cursor: pointer;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
-}
-
-.carousel-btn:hover {
-    background-color: #2a9d8f;
-}
-
-.prev-btn {
-    left: 10px;
-}
-
-.next-btn {
-    right: 10px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .product-carousel {
-        gap: 15px;
+    <style>
+    /* Content Section Background */
+    .section-background {
+        background-color: #f4f8fb;
+        padding: 50px 0;
+        margin: 0;
     }
 
-    .carousel-btn {
-        width: 30px;
-        height: 30px;
-        font-size: 16px;
+    /* General Section Styling */
+    .section-container {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .section {
+        padding: 50px 30px;
+        background: #ffffff;
+        margin: 0 auto;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        max-width: 1200px;
+    }
+    </style>
+
+    <style>
+    /* Featured Products Section */
+    .featured-products {
+        text-align: center;
+        padding: 40px 20px;
+        background-color: #f4f4f4;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .featured-products h2 {
+        font-size: 28px;
+        color: #0e2841;
+        margin-bottom: 20px;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .product-carousel {
+        display: flex;
+        gap: 20px;
+        transition: transform 0.5s ease-in-out;
+        width: fit-content;
+        position: relative;
+        left: 0;
     }
 
     .product {
-        width: 150px;
+        text-align: center;
+        width: 180px;
+        background: #ffffff;
+        border-radius: 50%;
+        padding: 15px;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        overflow: hidden;
     }
 
     .product img {
-        width: 100px; /* Proportional to reduced container size */
-        height: 100px;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 10px;
+        transition: transform 0.3s ease;
     }
 
     .product h3 {
-        font-size: 12px; /* Adjusted font size for smaller screens */
-    }
-}
-/* Footer General Styles */
-.site-footer {
-    background-color: #e8f4fa; /* Light blue background */
-    color: #333; /* Dark gray font for contrast */
-    padding: 40px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-top: 2px solid #ccc;
-    font-family: 'Roboto', sans-serif; /* Professional font */
-}
-
-.footer-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    width: 90%;
-    max-width: 1200px;
-}
-
-/* Footer Sections */
-.footer-section h2, .footer-section h3 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 24px;
-    color: #0e2841; /* Contrasting blue color for headings */
-    margin-bottom: 15px;
-}
-
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-section ul li {
-    margin-bottom: 10px;
-}
-
-.footer-section ul li a {
-    text-decoration: none;
-    color: #0e2841; /* Contrasting blue for links */
-    font-size: 16px;
-    transition: color 0.3s ease;
-}
-
-.footer-section ul li a:hover {
-    color: #2a9d8f; /* Light green hover effect */
-}
-
-/* Sign-Up Form */
-.sign-up-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.sign-up-form input[type="email"] {
-    padding: 10px;
-    border: 1px solid #0e2841;
-    border-radius: 5px;
-    font-size: 16px;
-    width: 100%;
-    box-sizing: border-box;
-    color: #333; /* Dark text for contrast */
-}
-
-.sign-up-form input[type="email"]::placeholder {
-    color: #aaa; /* Light gray placeholder */
-}
-
-.sign-up-form button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 25px;
-    background-color: #0e2841; /* Blue button */
-    color: #fff; /* White text */
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.sign-up-form button:hover {
-    background-color: #2a9d8f; /* Light green hover effect */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .footer-container {
-        grid-template-columns: 1fr;
+        font-size: 14px;
+        color: #333;
+        margin-bottom: 0;
+        font-family: 'Roboto', sans-serif;
+        width: 100%;
+        word-wrap: break-word;
         text-align: center;
+        line-height: 1.2;
+        margin-top: 5px;
     }
-    .footer-section {
+
+    .product:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .product img:hover {
+        transform: scale(1.1);
+    }
+
+    .carousel-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #0e2841;
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        cursor: pointer;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease;
+    }
+
+    .carousel-btn:hover {
+        background-color: #2a9d8f;
+    }
+
+    .prev-btn {
+        left: 10px;
+    }
+
+    .next-btn {
+        right: 10px;
+    }
+
+    @media (max-width: 768px) {
+        .product-carousel {
+            gap: 15px;
+        }
+
+        .carousel-btn {
+            width: 30px;
+            height: 30px;
+            font-size: 16px;
+        }
+
+        .product {
+            width: 150px;
+        }
+
+        .product img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .product h3 {
+            font-size: 12px;
+        }
+    }
+
+    /* Footer General Styles */
+    .site-footer {
+        background-color: #e8f4fa;
+        color: #333;
+        padding: 40px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top: 2px solid #ccc;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .footer-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        width: 90%;
+        max-width: 1200px;
+    }
+
+    .footer-section h2, .footer-section h3 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 24px;
+        color: #0e2841;
+        margin-bottom: 15px;
+    }
+
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-section ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer-section ul li a {
+        text-decoration: none;
+        color: #0e2841;
+        font-size: 16px;
+        transition: color 0.3s ease;
+    }
+
+    .footer-section ul li a:hover {
+        color: #2a9d8f;
+    }
+
+    .sign-up-form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .sign-up-form input[type="email"] {
+        padding: 10px;
+        border: 1px solid #0e2841;
+        border-radius: 5px;
+        font-size: 16px;
+        width: 100%;
+        box-sizing: border-box;
+        color: #333;
+    }
+
+    .sign-up-form input[type="email"]::placeholder {
+        color: #aaa;
+    }
+
+    .sign-up-form button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 25px;
+        background-color: #0e2841;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .sign-up-form button:hover {
+        background-color: #2a9d8f;
+    }
+
+    @media (max-width: 768px) {
+        .footer-container {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+        .footer-section {
+            margin-bottom: 20px;
+        }
+    }
+
+    nav {
+        background: #f7f7f7;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 10;
+    }
+    nav .logo-text {
+        display: flex;
+        align-items: center;
+        padding: 5px 10px;
+        border-radius: 8px;
+        animation: fadeIn 3s ease-in-out;
+    }
+    nav .logo-text img {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+        transition: transform 0.3s ease;
+        animation: slideIn 3s ease-in-out;
+    }
+    nav .logo-text img:hover {
+        transform: scale(1.5);
+    }
+    nav .logo-text img:active {
+        animation: spin 0.6s linear;
+    }
+    @keyframes spin {
+        from {transform: rotate(0deg);}
+        to {transform: rotate(360deg);}
+    }
+    nav .separator {
+        height: 50px;
+        width: 2px;
+        background-color: #0E2841;
+        margin: 0 10px;
+    }
+    nav .logo-text .company-name {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-family: 'Roboto', sans-serif;
+        color: #0E2841;
+        animation: fadeIn 3s ease-in-out;
+    }
+    nav .company-name .synzon {
+        font-size: 24px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    nav .company-name .india {
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-top: -5px;
+    }
+    nav ul {
+        display: flex;
+        list-style: none;
+    }
+    nav ul li {
+        margin: 0 15px;
+        position: relative;
+    }
+    nav ul li a {
+        color: #333;
+        text-decoration: none;
+        font-size: 15px;
+        position: relative;
+        overflow: hidden;
+    }
+    nav ul li a::after {
+        content: "";
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: #0E2841;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.3s ease;
+    }
+    nav ul li a:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    nav ul li .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #ffffff;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        padding: 10px;
+        list-style: none;
+        border-radius: 5px;
+        min-width: 200px;
+    }
+    nav ul li:hover .dropdown-content {
+        display: block;
+    }
+    nav ul li .dropdown-content li {
+        margin: 5px 0;
+    }
+    nav ul li .dropdown-content li a {
+        color: #0B2F9F;
+        text-decoration: none;
+        font-size: 14px;
+    }
+    nav ul li .dropdown-content li a:hover {
+        color: #161D6F;
+    }
+
+    @keyframes fadeIn {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+    }
+    @keyframes slideIn {
+        0% { transform: translateX(-50px); }
+        100% { transform: translateX(0); }
+    }
+
+    .hero {
+        background-image: url('images/DALL·E 2024-10-20 07.43.28 - A detailed scientific representation of leaves intertwined with molecular structures, designed for the nutraceutical industry with a different pattern.webp');
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+    }
+    .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(rgba(11, 47, 159, 0.3), rgba(11, 47, 159, 0.3));
+    }
+    .hero h1 {
+        font-size: 50px;
+        margin-bottom: 20px;
+        position: relative;
+        z-index: 1;
+        color: #ffffff;
+    }
+    .hero p {
+        font-size: 22px;
+        margin-bottom: 40px;
+        position: relative;
+        z-index: 1;
+        color: #ffffff;
+    }
+    .hero .cta-btn {
+        background-color: #98DED9;
+        color: #0B2F9F;
+        padding: 12px 25px;
+        border: none;
+        cursor: pointer;
+        font-size: 18px;
+        border-radius: 25px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        position: relative;
+        z-index: 1;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .hero .cta-btn:hover {
+        background-color: #0B2F9F;
+        color: #ffffff;
+        box-shadow: 0 0 15px #0B2F9F;
+        transform: scale(1.15);
+    }
+
+    .search-bar {
+        background-color: #ffffff;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        margin-top: -50px;
+        position: relative;
+        z-index: 5;
+        border-radius: 10px;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .search-bar input {
+        width: 80%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-right: 10px;
+        transition: transform 0.2s ease, border-color 0.3s ease;
+    }
+    .search-bar input:focus {
+        outline: none;
+        border-color: #0B2F9F;
+        transform: scale(1.05);
+    }
+    .search-bar button {
+        background-color: #161D6F;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+    .search-bar button:hover {
+        background-color: #0B2F9F;
+    }
+
+    .section {
+        display: flex;
+        align-items: center;
+        padding: 40px 20px;
+        background-color: #ffffff;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .section.appear {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .section:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+    .section img {
+        max-width: 40%;
+        margin-right: 20px;
+        border-radius: 5px;
+    }
+    .section:nth-child(even) img {
+        margin-right: 0;
+        margin-left: 20px;
+    }
+    .section .content {
+        max-width: 60%;
+    }
+    .section h2 {
+        font-size: 36px;
+        color: #0E2841;
         margin-bottom: 20px;
     }
-}
-        /* Navigation Bar */
-        nav {
-            background: #f7f7f7;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            position: fixed;
+    .section p {
+        font-size: 18px;
+        color: #333;
+        line-height: 1.6;
+    }
+    .section ul {
+        list-style-type: disc;
+        padding-left: 40px;
+        text-align: left;
+        margin-top: 20px;
+    }
+    .section ul li {
+        margin-bottom: 10px;
+        font-size: 18px;
+        color: #333;
+    }
+
+    footer {
+        background: #f7f7f7;
+        color: #333;
+        padding: 10px;
+        text-align: center;
+        margin-top: 30px;
+    }
+    </style>
+
+    <style>
+    /* Interactive Container Styles */
+    .interactive-container {
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 60px auto;
+        flex-wrap: wrap;
+    }
+
+    .interactive-section {
+        position: relative;
+        width: 45%;
+        cursor: pointer;
+        overflow: hidden;
+        border-radius: 20px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .interactive-section:hover {
+        transform: scale(1.05);
+    }
+
+    .image-container {
+        position: relative;
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+        border-radius: 15px;
+        transition: all 0.4s ease;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+        border: 5px solid #fff;
+        transform: rotate(-2deg);
+    }
+
+    .creative-position.reverse {
+        transform: rotate(2deg);
+    }
+
+    .image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .image-container:hover img {
+        transform: scale(1.1);
+        box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    }
+
+    .section-heading {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        font-size: 22px;
+        font-weight: bold;
+        color: #ffffff;
+        text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+        background: rgba(0,0,0,0.5);
+        padding: 8px 15px;
+        border-radius: 10px;
+    }
+
+    .hidden-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(240,248,255,0.95);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 30px;
+        opacity: 0;
+        transform: translateY(100%);
+        transition: all 0.5s ease;
+        border-radius: 15px;
+        overflow-y: auto;
+        box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .hidden-content h2 {
+        font-size: 26px;
+        color: #0e2841;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .hidden-content p {
+        font-size: 16px;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .hidden-content ul {
+        list-style: none;
+        padding: 0;
+        font-size: 16px;
+        color: #333;
+        line-height: 1.6;
+        text-align: left;
+        width: 100%;
+    }
+
+    .hidden-content ul li {
+        margin-bottom: 10px;
+    }
+
+    .interactive-section:focus-within .hidden-content,
+    .interactive-section:active .hidden-content {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .interactive-section:focus-within .image-container img,
+    .interactive-section:active .image-container img {
+        filter: blur(4px);
+    }
+
+    @media (max-width: 768px) {
+        .interactive-section {
             width: 100%;
-            top: 0;
-            z-index: 10;
         }
-        nav .logo-text {
-            display: flex;
-            align-items: center;
-            padding: 5px 10px;
-            border-radius: 8px;
-            animation: fadeIn 3s ease-in-out;
-        }
-        nav .logo-text img {
-            width: 40px;
-            height: 40px;
-            margin-right: 10px;
-            transition: transform 0.3s ease;
-            animation: slideIn 3s ease-in-out;
-        }
-        nav .logo-text img:hover {
-            transform: scale(1.5);
-        }
-        nav .logo-text img:active {
-            animation: spin 0.6s linear;
-        }
-        @keyframes spin {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
-        }
-        nav .separator {
-            height: 50px;
-            width: 2px;
-            background-color: #0E2841;
-            margin: 0 10px;
-        }
-        nav .logo-text .company-name {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            font-family: 'Roboto', sans-serif;
-            color: #0E2841;
-            animation: fadeIn 3s ease-in-out;
-        }
-        nav .company-name .synzon {
-            font-size: 24px;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-        nav .company-name .india {
-            font-size: 20px;
-            font-weight: bold;
-            text-transform: uppercase;
-            margin-top: -5px;
-        }
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-        nav ul li {
-            margin: 0 15px;
-            position: relative;
-        }
-        nav ul li a {
-            color: #333;
-            text-decoration: none;
-            font-size: 15px;
-            position: relative;
-            overflow: hidden;
-        }
-        nav ul li a::after {
-            content: "";
-            position: absolute;
-            bottom: -3px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: #0E2841;
-            transform: scaleX(0);
-            transform-origin: right;
-            transition: transform 0.3s ease;
-        }
-        nav ul li a:hover::after {
-            transform: scaleX(1);
-            transform-origin: left;
-        }
-        nav ul li .dropdown-content {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: #ffffff;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            padding: 10px;
-            list-style: none;
-            border-radius: 5px;
-            min-width: 200px;
-        }
-        nav ul li:hover .dropdown-content {
-            display: block;
-        }
-        nav ul li .dropdown-content li {
-            margin: 5px 0;
-        }
-        nav ul li .dropdown-content li a {
-            color: #0B2F9F;
-            text-decoration: none;
-            font-size: 14px;
-        }
-        nav ul li .dropdown-content li a:hover {
-            color: #161D6F;
-        }
+    }
+    </style>
 
-        /* Animation Keyframes */
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-        @keyframes slideIn {
-            0% { transform: translateX(-50px); }
-            100% { transform: translateX(0); }
-        }
+    <style>
+    .third-heading {
+        position: relative;
+        background-image: url('images/istockphoto-807490932-612x612.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #ffffff;
+    }
 
-        /* Hero Section */
-        .hero {
-            background-image: url('images/DALL·E 2024-10-20 07.43.28 - A detailed scientific representation of leaves intertwined with molecular structures, designed for the nutraceutical industry with a different pattern.webp');
-            height: 100vh;
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            position: relative;
-        }
-        .hero::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(rgba(11, 47, 159, 0.3), rgba(11, 47, 159, 0.3));
-        }
-        .hero h1 {
-            font-size: 50px;
-            margin-bottom: 20px;
-            position: relative;
-            z-index: 1;
-            color: #ffffff;
-        }
-        .hero p {
-            font-size: 22px;
-            margin-bottom: 40px;
-            position: relative;
-            z-index: 1;
-            color: #ffffff;
-        }
-        .hero .cta-btn {
-            background-color: #98DED9;
-            color: #0B2F9F;
-            padding: 12px 25px;
-            border: none;
-            cursor: pointer;
-            font-size: 18px;
-            border-radius: 25px;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-            position: relative;
-            z-index: 1;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-        .hero .cta-btn:hover {
-            background-color: #0B2F9F;
-            color: #ffffff;
-            box-shadow: 0 0 15px #0B2F9F;
-            transform: scale(1.15);
-        }
+    .third-heading .content-overlay {
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 30px;
+        border-radius: 15px;
+        max-width: 600px;
+    }
 
-        /* Single Search Bar Section */
-        .search-bar {
-            background-color: #ffffff;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            margin-top: -50px;
-            position: relative;
-            z-index: 5;
-            border-radius: 10px;
-            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-            width: 90%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .search-bar input {
-            width: 80%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            margin-right: 10px;
-            transition: transform 0.2s ease, border-color 0.3s ease;
-        }
-        .search-bar input:focus {
-            outline: none;
-            border-color: #0B2F9F;
-            transform: scale(1.05);
-        }
-        .search-bar button {
-            background-color: #161D6F;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-        .search-bar button:hover {
-            background-color: #0B2F9F;
-        }
+    .third-heading h2 {
+        font-size: 28px;
+        margin-bottom: 15px;
+        color: #ffffff;
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+    }
 
-        /* Introduction Sections with Image */
-        .section {
-            display: flex;
-            align-items: center;
-            padding: 40px 20px;
-            background-color: #ffffff;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
-        }
-        .section.appear {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .section:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-        .section img {
-            max-width: 40%;
-            margin-right: 20px;
-            border-radius: 5px;
-        }
-        .section:nth-child(even) img {
-            margin-right: 0;
-            margin-left: 20px;
-        }
-        .section .content {
-            max-width: 60%;
-        }
-        .section h2 {
-            font-size: 36px;
-            color: #0E2841;
-            margin-bottom: 20px;
-        }
-        .section p {
-            font-size: 18px;
-            color: #333;
-            line-height: 1.6;
-        }
-        .section ul {
-            list-style-type: disc;
-            padding-left: 40px;
-            text-align: left;
-            margin-top: 20px;
-        }
-        .section ul li {
-            margin-bottom: 10px;
-            font-size: 18px;
-            color: #333;
-        }
+    .third-heading p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #f0f0f0;
+        text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+    }
 
-        /* Footer */
-        footer {
-            background: #f7f7f7;
-            color: #333;
-            padding: 10px;
-            text-align: center;
-            margin-top: 30px;
+    .fourth-heading {
+        background-color: #f4f8fb;
+        padding: 60px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .fourth-content {
+        display: flex;
+        max-width: 1200px;
+        width: 100%;
+        gap: 40px;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .fourth-text {
+        flex: 1;
+        text-align: left;
+        color: #0e2841;
+    }
+    .fourth-text h3 {
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #2a9d8f;
+        margin-bottom: 10px;
+    }
+    .fourth-text h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+    .fourth-text p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+    .fourth-text .learn-more-link {
+        text-decoration: none;
+        color: #0e2841;
+        font-weight: bold;
+        border-bottom: 1px solid #0e2841;
+    }
+    .fourth-image img {
+        max-width: 100%;
+        border-radius: 15px;
+    }
+    </style>
+
+    <!-- New Certifications Section Styles -->
+    <style>
+    .certifications-section {
+        padding: 60px 20px;
+        background: #f9fbfd;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        margin-top: 50px;
+    }
+
+    .certifications-heading {
+        font-size: 28px;
+        color: #0e2841;
+        margin-bottom: 40px;
+        font-family: 'Roboto', sans-serif;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .certifications-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .certification-logo {
+        background: #ffffff;
+        border-radius: 15px;
+        padding: 20px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        width: 150px;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .certification-logo img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        opacity: 0;
+        transform: scale(0.8);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .certification-logo:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+
+    @media (max-width: 768px) {
+        .certification-logo {
+            width: 120px;
+            height: 120px;
         }
+    }
     </style>
 </head>
 <body>
@@ -631,87 +893,72 @@
     <input type="text" placeholder="Search for products or services...">
     <button>Search</button>
 </div>
+
 <!-- Featured Products Section -->
 <section class="featured-products">
     <h2>Featured Products</h2>
     <div class="product-carousel">
-        <!-- Product 1 -->
         <div class="product">
             <img src="images/Colllagen.webp" alt="Colllagen">
             <h3>Collagen Booster</h3>
         </div>
-        <!-- Product 2 -->
         <div class="product">
             <img src="images/Sulfate.webp" alt="Sulfate">
             <h3>Chondroitin Sulfate</h3>
         </div>
-        <!-- Product 3 -->
         <div class="product">
             <img src="images/Q10.webp" alt="Q10">
             <h3>Coenzyme Q10</h3>
         </div>
-        <!-- Product 4 -->
         <div class="product">
             <img src="images/B1.webp" alt="B1">
             <h3>Vitamin B1 (Thiamine HCL/Mono)</h3>
         </div>
-        <!-- Product 5 -->
         <div class="product">
             <img src="images/B5.webp" alt="B5">
             <h3>Vitamin B5 (Calcium Pantothenate)</h3>
         </div>
-        <!-- Product 6 -->
         <div class="product">
             <img src="images/B6.webp" alt="B6">
             <h3>Vitamin B6 (Pyridoxine)</h3>
         </div>
-        <!-- Product 7 -->
         <div class="product">
             <img src="images/GreenTea.webp" alt="Green Tea">
             <h3>Green Tea Extract</h3>
         </div>
-        <!-- Product 8 -->
         <div class="product">
             <img src="images/Taurine.webp" alt="Taurine">
             <h3>Taurine</h3>
         </div>
-        <!-- Product 9 -->
         <div class="product">
             <img src="images/L.webp" alt="L">
             <h3>L-Carnitine Variants</h3>
         </div>
-        <!-- Product 10 -->
         <div class="product">
             <img src="images/Aspartame.webp" alt="Aspartame">
             <h3>Aspartame</h3>
         </div>
-        <!-- Product 11 -->
         <div class="product">
             <img src="images/K.webp" alt="K">
             <h3>Acesulfame K</h3>
         </div>
-        <!-- Product 12 -->
         <div class="product">
             <img src="images/Surclose.webp" alt="Surclose">
             <h3>Sucralose</h3>
         </div>
-        <!-- Product 13 -->
         <div class="product">
             <img src="images/Sodium Erythorbate.webp" alt="Sodium Erythorbate">
             <h3>Sodium Erythorbate</h3>
         </div>
-        <!-- Product 14 -->
         <div class="product">
             <img src="images/Resveratrol.webp" alt="Resveratrol">
             <h3>Resveratrol</h3>
         </div>
     </div>
-
-    <!-- Navigation Buttons -->
     <button class="carousel-btn prev-btn">&lt;</button>
     <button class="carousel-btn next-btn">&gt;</button>
 </section>
-<!-- Content Sections -->
+
 <!-- Content Sections -->
 <div id="about-us" class="section">
     <div class="section-icon">
@@ -755,13 +1002,12 @@
             <a href="#learn-more" class="learn-more-link">Learn More ></a>
         </div>
         <div class="fourth-image">
-            <img src="images/partnership.jpg" alt="Strategic Partnerships"> <!-- Replace with actual image -->
+            <img src="images/partnership.jpg" alt="Strategic Partnerships">
         </div>
     </div>
 </div>
 
 <div class="interactive-container">
-    <!-- Commitment to Quality and Service -->
     <div id="quality-service" class="interactive-section">
         <div class="image-container creative-position">
             <img src="images/istockphoto-866525434-612x612.jpg" alt="Commitment to Quality and Service">
@@ -778,7 +1024,6 @@
         </div>
     </div>
 
-    <!-- Why Choose Synzon India -->
     <div id="why-choose-us" class="interactive-section">
         <div class="image-container creative-position reverse">
             <img src="images/istockphoto-1410938025-612x612.jpg" alt="Why Choose Us">
@@ -798,276 +1043,28 @@
     </div>
 </div>
 
+<!-- Certifications Section -->
+<section class="certifications-section">
+    <h2 class="certifications-heading">Our Certifications & Accreditations</h2>
+    <div class="certifications-container">
+        <div class="certification-logo">
+            <img src="images/Screenshot 2024-12-18 005626.png" alt="Certification 1">
+        </div>
+        <div class="certification-logo">
+            <img src="images/Screenshot 2024-12-18 005701.png" alt="Certification 2">
+        </div>
+        <div class="certification-logo">
+            <img src="images/Screenshot 2024-12-18 005723.png" alt="Certification 3">
+        </div>
+        <div class="certification-logo">
+            <img src="images/Screenshot 2024-12-18 005748.png" alt="Certification 4">
+        </div>
+        <div class="certification-logo">
+            <img src="images/Screenshot 2024-12-18 005858.png" alt="Certification 5">
+        </div>
+    </div>
+</section>
 
-      
-<style>
-/* General Interactive Section Styling */
-.interactive-container {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    align-items: flex-start;
-    margin: 60px auto;
-    flex-wrap: wrap; /* Adjust for responsive screens */
-}
-
-.interactive-section {
-    position: relative;
-    width: 45%; /* Two items side-by-side */
-    cursor: pointer;
-    overflow: hidden;
-    border-radius: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.interactive-section:hover {
-    transform: scale(1.05);
-}
-
-/* Image Container with Creative Positioning */
-.image-container {
-    position: relative;
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
-    border-radius: 15px;
-    transition: all 0.4s ease;
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2); /* Shadow for photograph effect */
-    border: 5px solid #fff; /* White border to mimic a photo */
-    transform: rotate(-2deg);
-}
-
-.creative-position.reverse {
-    transform: rotate(2deg); /* Reverse rotation for variation */
-}
-
-.image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.image-container:hover img {
-    transform: scale(1.1);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-}
-
-/* Section Heading Over Image */
-.section-heading {
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-    font-size: 22px;
-    font-weight: bold;
-    color: #ffffff;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
-    background: rgba(0, 0, 0, 0.5);
-    padding: 8px 15px;
-    border-radius: 10px;
-}
-
-/* Hidden Content with Background */
-.hidden-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(240, 248, 255, 0.95); /* Light, slightly transparent color */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 30px;
-    opacity: 0;
-    transform: translateY(100%);
-    transition: all 0.5s ease;
-    border-radius: 15px;
-    overflow-y: auto; /* Enable scrolling for long content */
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow inside */
-}
-
-.hidden-content h2 {
-    font-size: 26px;
-    color: #0e2841;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.hidden-content p {
-    font-size: 16px;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.hidden-content ul {
-    list-style: none;
-    padding: 0;
-    font-size: 16px;
-    color: #333;
-    line-height: 1.6;
-    text-align: left;
-    width: 100%;
-}
-
-.hidden-content ul li {
-    margin-bottom: 10px;
-}
-
-/* Reveal Content on Click */
-.interactive-section:focus-within .hidden-content,
-.interactive-section:active .hidden-content {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.interactive-section:focus-within .image-container img,
-.interactive-section:active .image-container img {
-    filter: blur(4px);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .interactive-section {
-        width: 100%; /* Stack items vertically */
-    }
-}
-</style>
-
-
-
-      
-<style>
-/* General Section Styling */
-.section {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 50px auto;
-    padding: 60px 40px;
-    background: linear-gradient(135deg, #f5f7fa, #e8f4fa);
-    border-radius: 20px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    opacity: 0;
-    transform: scale(0.95) translateY(50px);
-    transition: all 0.8s ease;
-}
-.section.appear {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-}
-.section:nth-child(even) {
-    flex-direction: row-reverse;
-}
-
-/* Icon Styling */
-.section-icon {
-    position: absolute;
-    top: -40px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #ffffff;
-    padding: 15px;
-    border-radius: 50%;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    z-index: 5;
-}
-.section-icon a {
-    color: #2a9d8f;
-    font-size: 24px;
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-.section-icon a:hover {
-    transform: scale(1.2);
-    color: #264653;
-}
-
-/* Third Heading: Image Background with Enhanced Text Visibility */
-.third-heading {
-    position: relative;
-    background-image: url('images/istockphoto-807490932-612x612.jpg'); /* Replace with your image path */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #ffffff; /* Light text color */
-}
-
-.third-heading .content-overlay {
-    background-color: rgba(0, 0, 0, 0.7); /* Increased opacity for better contrast */
-    padding: 30px;
-    border-radius: 15px;
-    max-width: 600px;
-}
-
-.third-heading h2 {
-    font-size: 28px;
-    margin-bottom: 15px;
-    color: #ffffff; /* Ensure the text color is white */
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Add shadow for better readability */
-}
-
-.third-heading p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #f0f0f0; /* Slightly off-white for subtle contrast */
-    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7); /* Text shadow for readability */
-}
-/* Fourth Heading */
-.fourth-heading {
-    background-color: #f4f8fb;
-    padding: 60px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.fourth-content {
-    display: flex;
-    max-width: 1200px;
-    width: 100%;
-    gap: 40px;
-    align-items: center;
-    flex-wrap: wrap;
-}
-.fourth-text {
-    flex: 1;
-    text-align: left;
-    color: #0e2841;
-}
-.fourth-text h3 {
-    font-size: 16px;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #2a9d8f;
-    margin-bottom: 10px;
-}
-.fourth-text h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-.fourth-text p {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-.fourth-text .learn-more-link {
-    text-decoration: none;
-    color: #0e2841;
-    font-weight: bold;
-    border-bottom: 1px solid #0e2841;
-}
-.fourth-image img {
-    max-width: 100%;
-    border-radius: 15px;
-}
-</style>
 <!-- Footer Section -->
 <footer class="site-footer">
     <div class="footer-container">
@@ -1082,7 +1079,7 @@
             <ul>
                 <li><a href="#about-us">About us</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="products.html">Products</a></li> <!-- Link updated to "Products" -->
+                <li><a href="products.html">Products</a></li>
             </ul>
         </div>
 
@@ -1106,38 +1103,35 @@
         </div>
     </div>
 </footer>
-   <!-- Your other content and sections -->
+
 <script>
     const carousel = document.querySelector('.product-carousel');
     const nextBtn = document.querySelector('.next-btn');
     const prevBtn = document.querySelector('.prev-btn');
 
-    let currentPosition = 0; // Current scroll position
-    const productWidth = 220; // Width of each product card including margin
-    const visibleProducts = Math.floor(carousel.parentElement.clientWidth / productWidth); // Number of visible products at a time
-    const totalProducts = carousel.children.length; // Total number of products
+    let currentPosition = 0; 
+    const productWidth = 220;
+    const visibleProducts = Math.floor(carousel.parentElement.clientWidth / productWidth);
+    const totalProducts = carousel.children.length;
 
-    // Event listener for next button
     nextBtn.addEventListener('click', () => {
         const maxScroll = (totalProducts - visibleProducts) * productWidth;
         currentPosition -= productWidth;
         if (Math.abs(currentPosition) > maxScroll) {
-            currentPosition = 0; // Reset to the start
+            currentPosition = 0;
         }
         carousel.style.transform = `translateX(${currentPosition}px)`;
     });
 
-    // Event listener for previous button
     prevBtn.addEventListener('click', () => {
         const maxScroll = (totalProducts - visibleProducts) * productWidth;
         currentPosition += productWidth;
         if (currentPosition > 0) {
-            currentPosition = -maxScroll; // Jump to the end
+            currentPosition = -maxScroll;
         }
         carousel.style.transform = `translateX(${currentPosition}px)`;
     });
 </script>
-<!-- JavaScript -->
 <script>
     // Smooth scrolling for navigation links
     document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
@@ -1190,5 +1184,35 @@ document.querySelectorAll('.interactive-section').forEach(section => {
 });
 </script>
 
+<script>
+    // Intersection Observer for Certifications Section and Heading
+    const certHeading = document.querySelector('.certifications-heading');
+    const certContainer = document.querySelector('.certifications-container');
+    const certLogos = document.querySelectorAll('.certification-logo img');
+
+    const certObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                certHeading.style.opacity = '1';
+                certHeading.style.transform = 'translateY(0)';
+                certContainer.style.opacity = '1';
+                certContainer.style.transform = 'translateY(0)';
+
+                // Animate each logo
+                certLogos.forEach((logo, index) => {
+                    setTimeout(() => {
+                        logo.style.opacity = '1';
+                        logo.style.transform = 'scale(1)';
+                    }, index * 200);
+                });
+
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    certObserver.observe(certHeading);
+    certObserver.observe(certContainer);
+</script>
 </body>
 </html>
