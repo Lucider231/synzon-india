@@ -1068,134 +1068,120 @@
     border-radius: 15px;
 }
 </style>
-      <!-- Certifications Section -->
+     <!-- Certifications Section -->
 <div class="certifications-section">
     <h2 class="certifications-heading">Our Certifications</h2>
     <p class="certifications-subtext">We take pride in our globally recognized certifications and ISO standards.</p>
-    <div class="certifications-container">
-        <!-- Certification 1 -->
-        <div class="certification-card">
-            <img src="images/Screenshot 2024-12-18 005626.png" alt="Certification 1">
-        </div>
-        <!-- Certification 2 -->
-        <div class="certification-card">
-            <img src="images/Screenshot 2024-12-18 005701.png" alt="Certification 2">
-        </div>
-        <!-- Certification 3 -->
-        <div class="certification-card">
-            <img src="images/Screenshot 2024-12-18 005723.png" alt="Certification 3">
-        </div>
-        <!-- Certification 4 -->
-        <div class="certification-card">
-            <img src="images/Screenshot 2024-12-18 005748.png" alt="Certification 4">
-        </div>
-        <!-- Certification 5 -->
-        <div class="certification-card">
-            <img src="images/Screenshot 2024-12-18 005858.png" alt="Certification 5">
+    <!-- Scrolling Container -->
+    <div class="certifications-slider">
+        <div class="certifications-track">
+            <!-- Certification Logos -->
+            <div class="certification-card">
+                <img src="images/Screenshot 2024-12-18 005626.png" alt="Certification 1">
+            </div>
+            <div class="certification-card">
+                <img src="images/Screenshot 2024-12-18 005701.png" alt="Certification 2">
+            </div>
+            <div class="certification-card">
+                <img src="images/Screenshot 2024-12-18 005723.png" alt="Certification 3">
+            </div>
+            <div class="certification-card">
+                <img src="images/Screenshot 2024-12-18 005748.png" alt="Certification 4">
+            </div>
+            <div class="certification-card">
+                <img src="images/Screenshot 2024-12-18 005858.png" alt="Certification 5">
+            </div>
+            <!-- Duplicate the logos for seamless looping -->
+            <div class="certification-card">
+                <img src="images/Screenshot 2024-12-18 005626.png" alt="Certification 1">
+            </div>
+            <div class="certification-card">
+                <img src="images/Screenshot 2024-12-18 005701.png" alt="Certification 2">
+            </div>
+            <div class="certification-card">
+                <img src="images/Screenshot 2024-12-18 005723.png" alt="Certification 3">
+            </div>
+            <div class="certification-card">
+                <img src="images/Screenshot 2024-12-18 005748.png" alt="Certification 4">
+            </div>
+            <div class="certification-card">
+                <img src="images/Screenshot 2024-12-18 005858.png" alt="Certification 5">
+            </div>
         </div>
     </div>
 </div>
+
 <style>
 /* Certifications Section */
 .certifications-section {
-    background-color: #f9fafb; /* Light neutral background */
+    background-color: #f9fafb;
     padding: 60px 20px;
     text-align: center;
-    position: relative;
-    overflow: hidden;
+    overflow: hidden; /* Ensure slider stays in bounds */
 }
 
 /* Heading Styling */
 .certifications-heading {
     font-size: 36px;
     font-weight: bold;
-    color: #0E2841; /* Match theme color */
+    color: #0E2841;
     margin-bottom: 10px;
-    opacity: 0;
-    animation: fadeInUp 1s ease forwards;
 }
 
 .certifications-subtext {
     font-size: 18px;
     color: #666;
     margin-bottom: 30px;
-    opacity: 0;
-    animation: fadeInUp 1.2s ease forwards;
 }
 
-/* Certification Cards Container */
-.certifications-container {
+/* Scrolling Slider */
+.certifications-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.certifications-track {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+    gap: 50px; /* Increased gap between logos */
+    animation: scrollLeft 15s linear infinite; /* Smooth continuous animation */
 }
 
-/* Individual Certification Card */
 .certification-card {
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    width: 180px;
-    height: 180px;
+    min-width: 150px; /* Smaller card size */
+    height: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: scale(0.8);
-    opacity: 0;
-    animation: zoomIn 0.8s ease forwards;
 }
 
 .certification-card img {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
+/* Hover Effect */
 .certification-card:hover img {
     transform: scale(1.1);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Animations */
-@keyframes fadeInUp {
+/* Keyframes for Sliding Animation */
+@keyframes scrollLeft {
     from {
-        opacity: 0;
-        transform: translateY(30px);
+        transform: translateX(0);
     }
     to {
-        opacity: 1;
-        transform: translateY(0);
+        transform: translateX(-100%);
     }
 }
-
-@keyframes zoomIn {
-    from {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-.certification-card:nth-child(1) { animation-delay: 0.3s; }
-.certification-card:nth-child(2) { animation-delay: 0.5s; }
-.certification-card:nth-child(3) { animation-delay: 0.7s; }
-.certification-card:nth-child(4) { animation-delay: 0.9s; }
-.certification-card:nth-child(5) { animation-delay: 1.1s; }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-    .certifications-container {
-        gap: 10px;
-    }
     .certification-card {
-        width: 140px;
-        height: 140px;
+        min-width: 120px; /* Slightly smaller cards on mobile */
+        height: 120px;
     }
     .certifications-heading {
         font-size: 28px;
