@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Animation Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <style>
         /* General Reset */
         * {
@@ -207,29 +209,48 @@ nav ul li a:hover {
     </div>
 </div>
 <style>
-    /* Filter Bar */
-    .filter-bar {
-        position: sticky;
-        top: 60px;
-        background: #ffffff;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        z-index: 999;
-        display: flex;
-        justify-content: space-around;
-        padding: 10px 20px;
-    }
-    .filter-bar a {
-        text-decoration: none;
-        font-weight: 700;
-        color: #333;
-        transition: color 0.3s, border-bottom 0.3s;
-        border-bottom: 2px solid transparent;
-    }
-    .filter-bar a:hover {
-        color: #0B2F9F;
-        border-bottom: 2px solid #0B2F9F;
-    }
+/* Filter Bar Styling */
+.filter-bar {
+    position: sticky;
+    top: 60px;
+    background: linear-gradient(90deg, #0E2841, #98DED9);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 20px;
+    animation: slideInFromTop 1.2s ease-in-out;
+    border-radius: 10px;
+    margin: 10px auto;
+    max-width: 95%;
+}
+.filter-bar a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    color: #ffffff;
+    background: #161D6F;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.filter-bar a:hover {
+    background: #0B2F9F;
+    transform: scale(1.1);
+}
 
+/* Animation for Filter Bar */
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
     /* Products Section */
     .products-section {
         padding: 60px 20px;
@@ -280,15 +301,15 @@ nav ul li a:hover {
 </style>
 
 <!-- Filter Bar -->
-<div class="filter-bar">
-    <a href="#joint-support" class="active">Joint Support</a>
-    <a href="#vitamins">Vitamins & Derivatives</a>
-    <a href="#herbal-extracts">Herbal Extracts</a>
-    <a href="#sport-nutrition">Sport Nutrition</a>
-    <a href="#protein">Protein</a>
-    <a href="#preservatives">Preservatives</a>
-    <a href="#sweeteners">Sweeteners</a>
-    <a href="#other-additives">Other Additives</a>
+<div class="filter-bar animate__animated animate__fadeInDown">
+    <a href="#joint-support" class="filter-link">Joint Support</a>
+    <a href="#vitamins" class="filter-link">Vitamins & Derivatives</a>
+    <a href="#herbal-extracts" class="filter-link">Herbal Extracts</a>
+    <a href="#sport-nutrition" class="filter-link">Sport Nutrition</a>
+    <a href="#protein" class="filter-link">Protein</a>
+    <a href="#preservatives" class="filter-link">Preservatives</a>
+    <a href="#sweeteners" class="filter-link">Sweeteners</a>
+    <a href="#other-additives" class="filter-link">Other Additives</a>
 </div>
 
 <!-- Products Section -->
@@ -563,6 +584,18 @@ nav ul li a:hover {
         <p>&copy; 2023 Synzon India. All Rights Reserved.</p>
     </div>
 </footer>
-    
+ <script>
+    document.querySelectorAll('.filter-link').forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+</script>
+   
 </body>
 </html>
