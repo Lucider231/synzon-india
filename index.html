@@ -1072,41 +1072,23 @@
 <div class="certifications-section">
     <h2 class="certifications-heading">Our Certifications</h2>
     <p class="certifications-subtext">We take pride in our globally recognized certifications and ISO standards.</p>
+    
     <!-- Scrolling Container -->
     <div class="certifications-slider">
         <div class="certifications-track">
-            <!-- Certification Logos -->
-            <div class="certification-card">
-                <img src="images/Screenshot 2024-12-18 005626.png" alt="Certification 1">
-            </div>
-            <div class="certification-card">
-                <img src="images/Screenshot 2024-12-18 005701.png" alt="Certification 2">
-            </div>
-            <div class="certification-card">
-                <img src="images/Screenshot 2024-12-18 005723.png" alt="Certification 3">
-            </div>
-            <div class="certification-card">
-                <img src="images/Screenshot 2024-12-18 005748.png" alt="Certification 4">
-            </div>
-            <div class="certification-card">
-                <img src="images/Screenshot 2024-12-18 005858.png" alt="Certification 5">
-            </div>
-            <!-- Duplicate for Seamless Loop -->
-            <div class="certification-card">
-                <img src="images/Screenshot 2024-12-18 005626.png" alt="Certification 1">
-            </div>
-            <div class="certification-card">
-                <img src="images/Screenshot 2024-12-18 005701.png" alt="Certification 2">
-            </div>
-            <div class="certification-card">
-                <img src="images/Screenshot 2024-12-18 005723.png" alt="Certification 3">
-            </div>
-            <div class="certification-card">
-                <img src="images/Screenshot 2024-12-18 005748.png" alt="Certification 4">
-            </div>
-            <div class="certification-card">
-                <img src="images/Screenshot 2024-12-18 005858.png" alt="Certification 5">
-            </div>
+            <!-- Original Certification Logos -->
+            <div class="certification-card"><img src="images/Screenshot 2024-12-18 005626.png" alt="Certification 1"></div>
+            <div class="certification-card"><img src="images/Screenshot 2024-12-18 005701.png" alt="Certification 2"></div>
+            <div class="certification-card"><img src="images/Screenshot 2024-12-18 005723.png" alt="Certification 3"></div>
+            <div class="certification-card"><img src="images/Screenshot 2024-12-18 005748.png" alt="Certification 4"></div>
+            <div class="certification-card"><img src="images/Screenshot 2024-12-18 005858.png" alt="Certification 5"></div>
+
+            <!-- Duplicate Certification Logos for Seamless Scrolling -->
+            <div class="certification-card"><img src="images/Screenshot 2024-12-18 005626.png" alt="Certification 1"></div>
+            <div class="certification-card"><img src="images/Screenshot 2024-12-18 005701.png" alt="Certification 2"></div>
+            <div class="certification-card"><img src="images/Screenshot 2024-12-18 005723.png" alt="Certification 3"></div>
+            <div class="certification-card"><img src="images/Screenshot 2024-12-18 005748.png" alt="Certification 4"></div>
+            <div class="certification-card"><img src="images/Screenshot 2024-12-18 005858.png" alt="Certification 5"></div>
         </div>
     </div>
 </div>
@@ -1141,15 +1123,16 @@
     position: relative;
 }
 
-/* Track for Scrolling */
+/* Track with Logos */
 .certifications-track {
     display: flex;
-    width: calc(150px * 10 + 50px * 10); /* Total width of all logos (original + duplicates) */
-    animation: scrollLoop 15s linear infinite;
+    width: calc(300px * 10); /* Adjust based on total logos (original + duplicates) */
+    animation: scrollInfinite 15s linear infinite;
 }
 
+/* Individual Certification Cards */
 .certification-card {
-    flex: 0 0 150px; /* Smaller, fixed size for logos */
+    flex: 0 0 150px; /* Fixed width for logos */
     height: 150px;
     margin-right: 50px; /* Gap between logos */
     display: flex;
@@ -1161,22 +1144,22 @@
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
-    transition: transform 0.3s ease;
 }
 
-/* Hover Effect */
-.certification-card:hover img {
-    transform: scale(1.1);
-}
-
-/* Keyframes for Smooth Infinite Scroll */
-@keyframes scrollLoop {
+/* Infinite Scroll Animation */
+@keyframes scrollInfinite {
     from {
         transform: translateX(0);
     }
     to {
         transform: translateX(-50%);
     }
+}
+
+/* Hover Effect */
+.certification-card:hover img {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
 }
 </style>
 
