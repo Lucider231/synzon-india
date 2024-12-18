@@ -213,13 +213,12 @@ nav ul li a:hover {
 .filter-bar {
     position: sticky;
     top: 60px;
-    background: linear-gradient(90deg, #0E2841, #98DED9);
+    background: #0E2841; /* Matching the theme */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     z-index: 999;
     display: flex;
     justify-content: space-around;
     padding: 15px 20px;
-    animation: slideInFromTop 1.2s ease-in-out;
     border-radius: 10px;
     margin: 10px auto;
     max-width: 95%;
@@ -229,27 +228,15 @@ nav ul li a:hover {
     font-weight: bold;
     font-size: 16px;
     color: #ffffff;
-    background: #161D6F;
+    background: #98DED9; /* Contrasting color for buttons */
     padding: 10px 20px;
     border-radius: 5px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 .filter-bar a:hover {
-    background: #0B2F9F;
+    background: #0B2F9F; /* Deeper shade for hover */
     transform: scale(1.1);
-}
-
-/* Animation for Filter Bar */
-@keyframes slideInFromTop {
-    0% {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
 }
     /* Products Section */
     .products-section {
@@ -584,14 +571,16 @@ nav ul li a:hover {
         <p>&copy; 2023 Synzon India. All Rights Reserved.</p>
     </div>
 </footer>
- <script>
+<script>
     document.querySelectorAll('.filter-link').forEach(link => {
         link.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute('href').substring(1);
             const targetSection = document.getElementById(targetId);
+
             if (targetSection) {
-                targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                const offset = targetSection.getBoundingClientRect().top + window.scrollY - 100; // Adjust offset for the heading
+                window.scrollTo({ top: offset, behavior: 'smooth' });
             }
         });
     });
