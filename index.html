@@ -1072,10 +1072,9 @@
 <div class="certifications-section">
     <h2 class="certifications-heading">Our Certifications</h2>
     <p class="certifications-subtext">We take pride in our globally recognized certifications and ISO standards.</p>
-    
-    <!-- Slider Container -->
+    <!-- Scrolling Container -->
     <div class="certifications-slider">
-        <div class="certifications-track" id="certification-track">
+        <div class="certifications-track">
             <!-- Certification Logos -->
             <div class="certification-card">
                 <img src="images/Screenshot 2024-12-18 005626.png" alt="Certification 1">
@@ -1092,7 +1091,7 @@
             <div class="certification-card">
                 <img src="images/Screenshot 2024-12-18 005858.png" alt="Certification 5">
             </div>
-            <!-- Duplicate logos for smooth looping -->
+            <!-- Duplicate for Seamless Loop -->
             <div class="certification-card">
                 <img src="images/Screenshot 2024-12-18 005626.png" alt="Certification 1">
             </div>
@@ -1112,9 +1111,8 @@
     </div>
 </div>
 
-
 <style>
-/* Certifications Section */
+/* Section Styling */
 .certifications-section {
     background-color: #f9fafb;
     padding: 60px 20px;
@@ -1138,22 +1136,22 @@
 
 /* Slider Container */
 .certifications-slider {
-    position: relative;
     width: 100%;
     overflow: hidden;
+    position: relative;
 }
 
-/* Track with Duplicate Items */
+/* Track for Scrolling */
 .certifications-track {
     display: flex;
-    gap: 50px; /* Space between logos */
-    width: calc(300px * 10 + 50px * 10); /* Adjusted total width for smooth animation */
-    animation: scrollLoop 20s linear infinite;
+    width: calc(150px * 10 + 50px * 10); /* Total width of all logos (original + duplicates) */
+    animation: scrollLoop 15s linear infinite;
 }
 
 .certification-card {
-    flex: 0 0 150px; /* Fixed size for the logos */
+    flex: 0 0 150px; /* Smaller, fixed size for logos */
     height: 150px;
+    margin-right: 50px; /* Gap between logos */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1171,7 +1169,7 @@
     transform: scale(1.1);
 }
 
-/* Keyframes for Smooth Infinite Scrolling */
+/* Keyframes for Smooth Infinite Scroll */
 @keyframes scrollLoop {
     from {
         transform: translateX(0);
@@ -1181,8 +1179,6 @@
     }
 }
 </style>
-
-
 
 <!-- Footer Section -->
 <footer class="site-footer">
