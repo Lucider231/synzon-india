@@ -1072,10 +1072,11 @@
 <div class="certifications-section">
     <h2 class="certifications-heading">Our Certifications</h2>
     <p class="certifications-subtext">We take pride in our globally recognized certifications and ISO standards.</p>
-    <!-- Scrolling Container -->
+
+    <!-- Slider Container -->
     <div class="certifications-slider">
         <div class="certifications-track">
-            <!-- Certification Logos -->
+            <!-- Certification Logos - Original -->
             <div class="certification-card">
                 <img src="images/Screenshot 2024-12-18 005626.png" alt="Certification 1">
             </div>
@@ -1091,7 +1092,7 @@
             <div class="certification-card">
                 <img src="images/Screenshot 2024-12-18 005858.png" alt="Certification 5">
             </div>
-            <!-- Duplicate the logos for seamless looping -->
+            <!-- Certification Logos - Duplicate -->
             <div class="certification-card">
                 <img src="images/Screenshot 2024-12-18 005626.png" alt="Certification 1">
             </div>
@@ -1112,43 +1113,32 @@
 </div>
 
 <style>
-/* Certifications Section */
+/* Certifications Section Styling */
 .certifications-section {
     background-color: #f9fafb;
     padding: 60px 20px;
     text-align: center;
-    overflow: hidden; /* Ensure slider stays in bounds */
+    overflow: hidden;
 }
 
-/* Heading Styling */
-.certifications-heading {
-    font-size: 36px;
-    font-weight: bold;
-    color: #0E2841;
-    margin-bottom: 10px;
-}
-
-.certifications-subtext {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 30px;
-}
-
-/* Scrolling Slider */
+/* Slider Container */
 .certifications-slider {
     position: relative;
     width: 100%;
     overflow: hidden;
 }
 
+/* Track Container for Logos */
 .certifications-track {
     display: flex;
-    gap: 50px; /* Increased gap between logos */
-    animation: scrollLeft 15s linear infinite; /* Smooth continuous animation */
+    gap: 50px; /* Space between logos */
+    animation: scrollInfinite 15s linear infinite; /* Continuous sliding animation */
+    width: calc(300px * 10 + 50px * 10); /* Total width: 10 logos + spacing */
 }
 
+/* Individual Certification Cards */
 .certification-card {
-    min-width: 150px; /* Smaller card size */
+    flex: 0 0 150px; /* Logo size smaller */
     height: 150px;
     display: flex;
     justify-content: center;
@@ -1167,30 +1157,17 @@
     transform: scale(1.1);
 }
 
-/* Keyframes for Sliding Animation */
-@keyframes scrollLeft {
+/* Keyframes for Infinite Scrolling */
+@keyframes scrollInfinite {
     from {
         transform: translateX(0);
     }
     to {
-        transform: translateX(-100%);
-    }
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .certification-card {
-        min-width: 120px; /* Slightly smaller cards on mobile */
-        height: 120px;
-    }
-    .certifications-heading {
-        font-size: 28px;
-    }
-    .certifications-subtext {
-        font-size: 16px;
+        transform: translateX(-50%);
     }
 }
 </style>
+
 
 <!-- Footer Section -->
 <footer class="site-footer">
