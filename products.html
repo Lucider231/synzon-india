@@ -213,30 +213,53 @@ nav ul li a:hover {
 .filter-bar {
     position: sticky;
     top: 60px;
-    background: #0E2841; /* Matching the theme */
+    background: linear-gradient(90deg, #0E2841, #98DED9);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     z-index: 999;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 30px;
     padding: 15px 20px;
-    border-radius: 10px;
-    margin: 10px auto;
-    max-width: 95%;
+    margin: 0 auto 30px;
+    border-radius: 5px;
+    max-width: 90%;
 }
 .filter-bar a {
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 16px;
     color: #ffffff;
-    background: #98DED9; /* Contrasting color for buttons */
-    padding: 10px 20px;
-    border-radius: 5px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    position: relative;
+    transition: color 0.3s ease;
 }
 .filter-bar a:hover {
-    background: #0B2F9F; /* Deeper shade for hover */
-    transform: scale(1.1);
+    color: #FFD700; /* Gold hover color */
+}
+.filter-bar a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #FFD700; /* Gold underline */
+    left: 50%;
+    bottom: -5px;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+.filter-bar a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Scroll Animation for the Filter Bar */
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
     /* Products Section */
     .products-section {
@@ -288,7 +311,7 @@ nav ul li a:hover {
 </style>
 
 <!-- Filter Bar -->
-<div class="filter-bar animate__animated animate__fadeInDown">
+<div class="filter-bar">
     <a href="#joint-support" class="filter-link">Joint Support</a>
     <a href="#vitamins" class="filter-link">Vitamins & Derivatives</a>
     <a href="#herbal-extracts" class="filter-link">Herbal Extracts</a>
