@@ -22,45 +22,73 @@
         }
 
         /* Navigation Bar */
-        nav {
-            background: #f7f7f7;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-        nav .logo-text {
-            display: flex;
-            align-items: center;
-        }
-        nav .logo-text img {
-            width: 40px;
-            margin-right: 10px;
-        }
-        nav .company-name {
-            display: flex;
-            flex-direction: column;
-            color: #0E2841;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-            margin-left: 20px;
-            font-size: 15px;
-            transition: color 0.3s;
-        }
-        nav ul li a:hover {
-            color: #0E2841;
-        }
+nav {
+    background: #f7f7f7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+nav .logo-text {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+}
+nav .logo-text img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+nav .logo-text img:hover {
+    transform: scale(1.5);
+}
+nav .separator {
+    height: 50px;
+    width: 2px;
+    background-color: #0E2841;
+    margin: 0 10px;
+}
+nav .company-name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: 'Roboto', sans-serif;
+    color: #0E2841;
+}
+nav .company-name .synzon {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+nav .company-name .india {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: -5px;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+}
+nav ul li {
+    margin: 0 15px;
+    position: relative;
+}
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+nav ul li a:hover {
+    color: #0E2841;
+}
 
         /* Hero Section */
         .video-container {
@@ -106,15 +134,16 @@
 <nav>
     <div class="logo-text">
         <img src="images/pixelcut-export.jpeg" alt="Synzon Logo">
+        <div class="separator"></div>
         <div class="company-name">
             <span class="synzon">Synzon</span>
             <span class="india">India</span>
         </div>
     </div>
     <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#">Products</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#products"><i class="fas fa-box"></i> Products</a></li>
+        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact Us</a></li>
     </ul>
 </nav>
 
@@ -539,4 +568,3 @@ footer {
     
 </body>
 </html>
-</head>
