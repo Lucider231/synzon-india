@@ -4,23 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Synzon India - Product Page</title>
-    <!-- Google Fonts for Roboto and Crushed -->
-    <link href="https://fonts.googleapis.com/css2?family=Crushed&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        /* General Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         body {
-            font-family: Arial, sans-serif;
-            background-color: #ffffff;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f9f9f9;
             color: #333;
         }
+
         /* Navigation Bar */
         nav {
-            background: #f7f7f7; 
+            background: #f7f7f7;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -28,110 +31,43 @@
             position: fixed;
             width: 100%;
             top: 0;
-            z-index: 10;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
         nav .logo-text {
             display: flex;
             align-items: center;
-            padding: 5px 10px;
-            border-radius: 8px;
-            animation: fadeIn 3s ease-in-out;
         }
         nav .logo-text img {
             width: 40px;
-            height: 40px;
             margin-right: 10px;
-            transition: transform 0.3s ease;
-            animation: slideIn 3s ease-in-out;
         }
-        nav .logo-text img:hover {
-            transform: scale(1.5); 
-        }
-        nav .separator {
-            height: 50px;
-            width: 2px;
-            background-color: #0E2841; 
-            margin: 0 10px;
-        }
-        nav .logo-text .company-name {
+        nav .company-name {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
-            font-family: 'Roboto', sans-serif;
             color: #0E2841;
-            animation: fadeIn 3s ease-in-out;
-        }
-        nav .company-name .synzon {
-            font-size: 24px;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-        nav .company-name .india {
-            font-size: 20px;
-            font-weight: bold;
-            text-transform: uppercase;
-            margin-top: -5px;
         }
         nav ul {
-            display: flex;
             list-style: none;
-        }
-        nav ul li {
-            margin: 0 15px;
-            position: relative;
+            display: flex;
         }
         nav ul li a {
-            color: #333;
             text-decoration: none;
+            color: #333;
+            margin-left: 20px;
             font-size: 15px;
-            transition: color 0.3s ease;
+            transition: color 0.3s;
         }
         nav ul li a:hover {
             color: #0E2841;
         }
-        nav ul li .dropdown-content {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: #ffffff;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            padding: 10px;
-            list-style: none;
-            border-radius: 5px;
-            min-width: 200px;
-        }
-        nav ul li:hover .dropdown-content {
-            display: block;
-        }
-        nav ul li .dropdown-content li {
-            margin: 5px 0;
-        }
-        nav ul li .dropdown-content li a {
-            color: #0B2F9F;
-            text-decoration: none;
-            font-size: 14px;
-        }
-        nav ul li .dropdown-content li a:hover {
-            color: #161D6F;
-        }
 
-        /* Animation Keyframes */
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-        @keyframes slideIn {
-            0% { transform: translateX(-50px); }
-            100% { transform: translateX(0); }
-        }
-
-        /* Video Background Section */
+        /* Hero Section */
         .video-container {
             position: relative;
-            height: 80vh;
-            overflow: hidden;
             margin-top: 60px;
+            height: 70vh;
+            overflow: hidden;
         }
         .video-container video {
             width: 100%;
@@ -144,98 +80,23 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(11, 47, 159, 0.3);
+            background: rgba(11, 47, 159, 0.5);
         }
-        /* Animated Text Overlay */
         .video-container .animated-text {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             text-align: center;
-            color: #ffffff;
-            font-family: 'Roboto', sans-serif;
+            color: #fff;
             z-index: 1;
-            animation: bounceIn 3s ease-in-out;
         }
         .animated-text h1 {
-            font-size: 50px;
-            margin-bottom: 20px;
-            animation: bounceIn 2s ease-in-out;
+            font-size: 48px;
+            margin-bottom: 15px;
         }
         .animated-text p {
-            font-size: 24px;
-            animation: slideUp 2s ease-in-out 1s;
-        }
-        
-        /* Filter Bar */
-        .filter-bar {
-            background-color: #ffffff;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
-        .filter-bar a {
-            text-decoration: none;
-            color: #161D6F;
-            font-size: 18px;
-            font-weight: bold;
-            padding: 5px 10px;
-            transition: color 0.3s ease, border-bottom 0.3s ease;
-            border-bottom: 3px solid transparent;
-        }
-        .filter-bar a:hover,
-        .filter-bar a.active {
-            color: #0B2F9F;
-            border-bottom: 3px solid #0B2F9F;
-        }
-        
-        /* Products Section */
-        .products-section {
-            padding: 40px 20px;
-        }
-        .product-category {
-            margin-bottom: 40px;
-        }
-        .product-category h2 {
-            font-size: 32px;
-            color: #0E2841;
-            margin-bottom: 20px;
-        }
-        .product-list {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-        }
-        .product-item {
-            background: #ffffff;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 20px;
-            transition: box-shadow 0.3s ease;
-        }
-        .product-item:hover {
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-        .product-item img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-        }
-        .product-item h3 {
             font-size: 20px;
-            color: #0E2841;
-            margin: 15px 0 10px 0;
-        }
-        .product-item p {
-            font-size: 16px;
-            color: #333;
-            line-height: 1.5;
         }
     </style>
 </head>
@@ -244,8 +105,7 @@
 <!-- Navigation Bar -->
 <nav>
     <div class="logo-text">
-        <img src="images/pixelcut-export.jpeg" alt="Synzon India Logo">
-        <div class="separator"></div>
+        <img src="images/pixelcut-export.jpeg" alt="Synzon Logo">
         <div class="company-name">
             <span class="synzon">Synzon</span>
             <span class="india">India</span>
@@ -253,16 +113,16 @@
     </div>
     <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
     </ul>
 </nav>
 
-<!-- Video Background Section -->
+<!-- Hero Section -->
 <div class="video-container">
     <video autoplay muted loop>
         <source src="videos/vid_1.mp4" type="video/mp4">
-        Your browser does not support HTML video.
+        Your browser does not support the video tag.
     </video>
     <div class="overlay"></div>
     <div class="animated-text">
@@ -270,6 +130,78 @@
         <p>Bringing You the Best Nutraceutical Solutions</p>
     </div>
 </div>
+<style>
+    /* Filter Bar */
+    .filter-bar {
+        position: sticky;
+        top: 60px;
+        background: #ffffff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+        display: flex;
+        justify-content: space-around;
+        padding: 10px 20px;
+    }
+    .filter-bar a {
+        text-decoration: none;
+        font-weight: 700;
+        color: #333;
+        transition: color 0.3s, border-bottom 0.3s;
+        border-bottom: 2px solid transparent;
+    }
+    .filter-bar a:hover {
+        color: #0B2F9F;
+        border-bottom: 2px solid #0B2F9F;
+    }
+
+    /* Products Section */
+    .products-section {
+        padding: 60px 20px;
+        background: #f9f9f9;
+    }
+    .product-category {
+        margin-bottom: 50px;
+    }
+    .product-category h2 {
+        text-align: center;
+        color: #0E2841;
+        margin-bottom: 30px;
+        font-size: 32px;
+    }
+    .product-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    .product-item {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        overflow: hidden;
+    }
+    .product-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .product-item img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+    }
+    .product-item h3 {
+        font-size: 18px;
+        color: #0E2841;
+        padding: 15px 10px;
+        text-align: center;
+    }
+    .product-item p {
+        font-size: 14px;
+        color: #666;
+        padding: 0 10px 10px;
+        text-align: center;
+    }
+</style>
 
 <!-- Filter Bar -->
 <div class="filter-bar">
@@ -285,215 +217,322 @@
 
 <!-- Products Section -->
 <div class="products-section">
-
     <!-- Joint Support Section -->
     <div id="joint-support" class="product-category">
         <h2>Joint Support</h2>
         <div class="product-list">
             <div class="product-item">
+                <img src="images/product-coq10.jpg" alt="Coenzyme Q10">
                 <h3>Coenzyme Q10</h3>
                 <p>Supports energy production and heart health, beneficial for joint health.</p>
             </div>
             <div class="product-item">
+                <img src="images/product-chondroitin.jpg" alt="Chondroitin Sulfate">
                 <h3>Chondroitin Sulfate</h3>
                 <p>Promotes cartilage health, joint cushioning, and reduces pain and inflammation.</p>
             </div>
             <div class="product-item">
-                <h3>D-Glucosamine HCl, Sulfate 2KCl/NaCl</h3>
+                <img src="images/product-glucosamine.jpg" alt="D-Glucosamine">
+                <h3>D-Glucosamine HCl, Sulfate</h3>
                 <p>Essential for maintaining joint health and cartilage regeneration.</p>
             </div>
             <div class="product-item">
+                <img src="images/product-collagen.jpg" alt="Collagen">
                 <h3>Collagen</h3>
                 <p>Supports the maintenance of connective tissue, cartilage health, and skin elasticity.</p>
             </div>
             <div class="product-item">
+                <img src="images/product-msm.jpg" alt="MSM">
                 <h3>Methyl Sulfonyl Methane (MSM)</h3>
                 <p>Reduces inflammation and promotes joint flexibility and overall comfort.</p>
             </div>
             <div class="product-item">
-                <h3>Berberine hydrochloride</h3>
+                <img src="images/product-berberine.jpg" alt="Berberine">
+                <h3>Berberine Hydrochloride</h3>
                 <p>Known for its anti-inflammatory properties, beneficial for metabolic health.</p>
             </div>
             <div class="product-item">
+                <img src="images/product-artemisinin.jpg" alt="Artemisinin">
                 <h3>Artemisinin</h3>
                 <p>Extracted from sweet wormwood, known for its health benefits related to joint discomfort.</p>
             </div>
             <div class="product-item">
-                <h3>Inositol (Powder/Granular)</h3>
+                <img src="images/product-inositol.jpg" alt="Inositol">
+                <h3>Inositol</h3>
                 <p>Supports joint health and various metabolic functions in the body.</p>
             </div>
         </div>
     </div>
-
-    <!-- Vitamins & Derivatives Section -->
-    <div id="vitamins" class="product-category">
-        <h2>Vitamins & Derivatives</h2>
-        <div class="product-list">
-            <div class="product-item">
-                <h3>Vitamin A</h3>
-                <p>Supports vision, immune health, and skin health. Available as Acetate 325,000/500,000 IU/g, Palmitate 250,000 & 500,000 IU/g.</p>
-            </div>
-            <div class="product-item">
-                <h3>Vitamin B1 (Thiamine HCL/Mono)</h3>
-                <p>Essential for energy metabolism and proper nerve function. Promotes cardiovascular health.</p>
-            </div>
-            <div class="product-item">
-                <h3>Vitamin B5 (Calcium Pantothenate)</h3>
-                <p>Supports energy production and is vital for the synthesis of coenzyme A. Enhances skin health.</p>
-            </div>
-            <div class="product-item">
-                <h3>Vitamin B6 (Pyridoxine)</h3>
-                <p>Plays a role in over 100 enzyme reactions. Supports neurotransmitter synthesis and red blood cell formation.</p>
-            </div>
-            <div class="product-item">
-                <h3>Vitamin B9 (Folic Acid)</h3>
-                <p>Essential for DNA synthesis and repair. Available in concentrations 1%, 10%, and pure.</p>
-            </div>
-            <div class="product-item">
-                <h3>Vitamin B12 (Cyanocobalamine/Methylcobalamine)</h3>
-                <p>Supports nerve health and red blood cell production. Available in different variants.</p>
-            </div>
-            <div class="product-item">
-                <h3>Vitamin C (Ascorbic Acid)</h3>
-                <p>A powerful antioxidant that supports immune function, skin health, and overall well-being.</p>
-            </div>
-            <div class="product-item">
-                <h3>Vitamin H (D-Biotin)</h3>
-                <p>Plays a crucial role in supporting healthy hair, skin, and nails, and aids in metabolism regulation.</p>
-            </div>
+</div>
+<!-- Vitamins & Derivatives Section -->
+<div id="vitamins" class="product-category">
+    <h2>Vitamins & Derivatives</h2>
+    <div class="product-list">
+        <div class="product-item">
+            <img src="images/product-vitamin-a.jpg" alt="Vitamin A">
+            <h3>Vitamin A</h3>
+            <p>Supports vision, immune health, and skin health. Available in Acetate and Palmitate forms.</p>
+        </div>
+        <div class="product-item">
+            <img src="images/product-vitamin-b1.jpg" alt="Vitamin B1">
+            <h3>Vitamin B1 (Thiamine HCL/Mono)</h3>
+            <p>Essential for energy metabolism and proper nerve function.</p>
+        </div>
+        <div class="product-item">
+            <img src="images/product-vitamin-b5.jpg" alt="Vitamin B5">
+            <h3>Vitamin B5 (Calcium Pantothenate)</h3>
+            <p>Vital for energy production and synthesis of coenzyme A.</p>
+        </div>
+        <div class="product-item">
+            <img src="images/product-vitamin-b6.jpg" alt="Vitamin B6">
+            <h3>Vitamin B6 (Pyridoxine)</h3>
+            <p>Supports over 100 enzyme reactions, neurotransmitter synthesis, and red blood cell formation.</p>
+        </div>
+        <div class="product-item">
+            <img src="images/product-vitamin-b9.jpg" alt="Vitamin B9">
+            <h3>Vitamin B9 (Folic Acid)</h3>
+            <p>Essential for DNA synthesis and repair. Available in 1%, 10%, and pure forms.</p>
+        </div>
+        <div class="product-item">
+            <img src="images/product-vitamin-b12.jpg" alt="Vitamin B12">
+            <h3>Vitamin B12</h3>
+            <p>Supports nerve health and red blood cell production. Variants include Cyanocobalamin and Methylcobalamin.</p>
+        </div>
+        <div class="product-item">
+            <img src="images/product-vitamin-c.jpg" alt="Vitamin C">
+            <h3>Vitamin C (Ascorbic Acid)</h3>
+            <p>A powerful antioxidant that supports immune function and skin health.</p>
+        </div>
+        <div class="product-item">
+            <img src="images/product-biotin.jpg" alt="Biotin">
+            <h3>Vitamin H (D-Biotin)</h3>
+            <p>Supports healthy hair, skin, and nails, and aids in metabolism regulation.</p>
         </div>
     </div>
+</div>
 <!-- Herbal Extracts Section -->
 <div id="herbal-extracts" class="product-category">
     <h2>Herbal Extracts</h2>
     <div class="product-list">
         <div class="product-item">
+            <img src="images/product-ginkgo.jpg" alt="Ginkgo Biloba Extract">
             <h3>Ginkgo Biloba Extract</h3>
             <p>Supports brain function, memory enhancement, and blood circulation.</p>
         </div>
         <div class="product-item">
+            <img src="images/product-green-tea.jpg" alt="Green Tea Extract">
             <h3>Green Tea Extract</h3>
             <p>Rich in antioxidants, promotes metabolism, weight loss, and overall wellness.</p>
         </div>
         <div class="product-item">
+            <img src="images/product-bilberry.jpg" alt="Bilberry Extract">
             <h3>Bilberry Extract</h3>
-            <p>Enhances vision health, supports capillary health, and has antioxidant properties.</p>
+            <p>Enhances vision health, supports capillary strength, and provides antioxidants.</p>
         </div>
         <div class="product-item">
+            <img src="images/product-blackcurrant.jpg" alt="Black Currant Extract">
             <h3>Black Currant Extract</h3>
             <p>Contains antioxidants, supports immune health, and improves skin condition.</p>
         </div>
         <div class="product-item">
+            <img src="images/product-milk-thistle.jpg" alt="Milk Thistle Extract">
             <h3>Milk Thistle Extract</h3>
-            <p>Supports liver health, detoxification, and helps maintain skin health.</p>
+            <p>Supports liver detoxification, liver health, and overall skin well-being.</p>
         </div>
         <div class="product-item">
+            <img src="images/product-resveratrol.jpg" alt="Resveratrol">
             <h3>Resveratrol (50%, 70%, 98%)</h3>
             <p>A potent antioxidant that promotes cardiovascular health and anti-aging benefits.</p>
         </div>
     </div>
 </div>
-
 <!-- Sport Nutrition Section -->
 <div id="sport-nutrition" class="product-category">
     <h2>Sport Nutrition</h2>
     <div class="product-list">
         <div class="product-item">
+            <img src="images/product-taurine.jpg" alt="Taurine">
             <h3>Taurine</h3>
             <p>Supports cardiovascular health, energy levels, and muscle endurance.</p>
         </div>
         <div class="product-item">
+            <img src="images/product-creatine.jpg" alt="Creatine Monohydrate">
             <h3>Creatine Monohydrate</h3>
             <p>Enhances athletic performance, increases muscle strength, and promotes muscle growth.</p>
         </div>
         <div class="product-item">
+            <img src="images/product-glutamine.jpg" alt="L-Glutamine">
             <h3>L-Glutamine</h3>
             <p>Supports muscle recovery, immune function, and digestive health.</p>
         </div>
         <div class="product-item">
+            <img src="images/product-bcaa.jpg" alt="BCAA">
             <h3>BCAA (L-Leucine, L-Isoleucine, L-Valine)</h3>
             <p>Essential amino acids that promote muscle recovery, growth, and reduce fatigue.</p>
         </div>
         <div class="product-item">
+            <img src="images/product-l-carnitine.jpg" alt="L-Carnitine Variants">
             <h3>L-Carnitine Variants</h3>
             <p>Supports fat metabolism, energy production, and athletic performance.</p>
         </div>
         <div class="product-item">
-            <h3>L-Cysteine, L-Citrulline, L-Tyrosine, L-Arginine, L-Serine, Methionine, Tryptophan</h3>
+            <img src="images/product-l-cysteine.jpg" alt="L-Cysteine">
+            <h3>L-Cysteine, L-Citrulline, L-Tyrosine</h3>
             <p>Essential amino acids that support muscle health, recovery, and overall well-being.</p>
         </div>
     </div>
 </div>
-
 <!-- Protein Section -->
 <div id="protein" class="product-category">
     <h2>Protein</h2>
     <div class="product-list">
         <div class="product-item">
-            <h3>Hydrolyzed Protein (L-Cysteine HCL Anhydrous)</h3>
-            <p>Pre-digested protein that supports muscle growth, repair, and overall health.</p>
+            <img src="images/product-hydrolyzed-protein.jpg" alt="Hydrolyzed Protein">
+            <h3>Hydrolyzed Protein</h3>
+            <p>Supports muscle growth, repair, and overall health. Ideal for sports nutrition.</p>
         </div>
         <div class="product-item">
+            <img src="images/product-soy-protein.jpg" alt="Isolated Soy Protein">
             <h3>Isolated Soy Protein</h3>
-            <p>A high-quality plant-based protein that is ideal for muscle maintenance and growth.</p>
+            <p>A high-quality plant-based protein ideal for muscle maintenance and growth.</p>
         </div>
         <div class="product-item">
+            <img src="images/product-pea-protein.jpg" alt="Pea Protein">
             <h3>Pea Protein</h3>
             <p>A vegan protein source rich in iron, supporting muscle growth and overall health.</p>
         </div>
     </div>
 </div>
-
 <!-- Preservatives Section -->
 <div id="preservatives" class="product-category">
     <h2>Preservatives</h2>
     <div class="product-list">
         <div class="product-item">
+            <img src="images/product-sodium-erythorbate.jpg" alt="Sodium Erythorbate">
             <h3>Sodium Erythorbate</h3>
             <p>Helps maintain freshness, prevents color change in foods, and acts as an antioxidant.</p>
         </div>
         <div class="product-item">
+            <img src="images/product-potassium-sorbate.jpg" alt="Potassium Sorbate">
             <h3>Potassium Sorbate</h3>
-            <p>Widely used to preserve freshness in food and beverages, prevents mold and yeast growth.</p>
+            <p>Widely used to preserve freshness in food and beverages, preventing mold and yeast growth.</p>
         </div>
     </div>
 </div>
-
 <!-- Sweeteners Section -->
 <div id="sweeteners" class="product-category">
     <h2>Sweeteners</h2>
     <div class="product-list">
         <div class="product-item">
+            <img src="images/product-aspartame.jpg" alt="Aspartame">
             <h3>Aspartame</h3>
             <p>A low-calorie sweetener used to replace sugar in various food and beverages.</p>
         </div>
         <div class="product-item">
+            <img src="images/product-acesulfame-k.jpg" alt="Acesulfame K">
             <h3>Acesulfame K</h3>
             <p>A calorie-free sugar substitute used to add sweetness to drinks and baked goods.</p>
         </div>
         <div class="product-item">
+            <img src="images/product-sucralose.jpg" alt="Sucralose">
             <h3>Sucralose</h3>
             <p>A zero-calorie sweetener that is heat-stable, making it ideal for cooking and baking.</p>
         </div>
     </div>
 </div>
-
 <!-- Other Additives Section -->
 <div id="other-additives" class="product-category">
     <h2>Other Additives</h2>
     <div class="product-list">
         <div class="product-item">
-            <h3>Sodium/Calcium/Zinc Gluconate</h3>
+            <img src="images/product-sodium-gluconate.jpg" alt="Sodium Gluconate">
+            <h3>Sodium Gluconate</h3>
             <p>Used in various formulations to support mineral intake and enhance nutritional value.</p>
+        </div>
+        <div class="product-item">
+            <img src="images/product-calcium-gluconate.jpg" alt="Calcium Gluconate">
+            <h3>Calcium Gluconate</h3>
+            <p>A source of calcium often used in food, beverages, and supplements for bone health.</p>
+        </div>
+        <div class="product-item">
+            <img src="images/product-zinc-gluconate.jpg" alt="Zinc Gluconate">
+            <h3>Zinc Gluconate</h3>
+            <p>Supports immune function and overall health, commonly found in supplements and fortified foods.</p>
         </div>
     </div>
 </div>
-</div>
-
 <!-- Footer -->
 <footer>
-    <p>&copy; 2023 Synzon India. All rights reserved.</p>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>About Synzon India</h3>
+            <p>Synzon India is a leading nutraceutical solutions provider, delivering high-quality products to meet diverse customer needs. Our commitment to innovation and excellence ensures customer satisfaction at every step.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>Email: info@synzonindia.com</p>
+            <p>Phone: +91-1234567890</p>
+            <p>Address: 123 Business Avenue, New Delhi, India</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2023 Synzon India. All Rights Reserved.</p>
+    </div>
 </footer>
-
-</body>
-</html>
+    
+<style>
+/* Footer Styling */
+footer {
+    background: #0E2841;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+}
+.footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #98DED9;
+}
+.footer-section p,
+.footer-section ul li {
+    font-size: 14px;
+    line-height: 1.8;
+}
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-section ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+.footer-section ul li a:hover {
+    color: #98DED9;
+}
+.footer-bottom {
+    font-size: 12px;
+    border-top: 1px solid #98DED9;
+    padding-top: 10px;
+    margin-top: 20px;
+}
+</style>
