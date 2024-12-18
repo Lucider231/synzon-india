@@ -1068,15 +1068,15 @@
     border-radius: 15px;
 }
 </style>
-     <!-- Certifications Section -->
+<!-- Certifications Section -->
 <div class="certifications-section">
     <h2 class="certifications-heading">Our Certifications</h2>
     <p class="certifications-subtext">We take pride in our globally recognized certifications and ISO standards.</p>
-
+    
     <!-- Slider Container -->
     <div class="certifications-slider">
-        <div class="certifications-track">
-            <!-- Certification Logos - Original -->
+        <div class="certifications-track" id="certification-track">
+            <!-- Certification Logos -->
             <div class="certification-card">
                 <img src="images/Screenshot 2024-12-18 005626.png" alt="Certification 1">
             </div>
@@ -1092,7 +1092,7 @@
             <div class="certification-card">
                 <img src="images/Screenshot 2024-12-18 005858.png" alt="Certification 5">
             </div>
-            <!-- Certification Logos - Duplicate -->
+            <!-- Duplicate logos for smooth looping -->
             <div class="certification-card">
                 <img src="images/Screenshot 2024-12-18 005626.png" alt="Certification 1">
             </div>
@@ -1112,13 +1112,28 @@
     </div>
 </div>
 
+
 <style>
-/* Certifications Section Styling */
+/* Certifications Section */
 .certifications-section {
     background-color: #f9fafb;
     padding: 60px 20px;
     text-align: center;
     overflow: hidden;
+}
+
+/* Heading Styling */
+.certifications-heading {
+    font-size: 36px;
+    font-weight: bold;
+    color: #0E2841;
+    margin-bottom: 10px;
+}
+
+.certifications-subtext {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
 }
 
 /* Slider Container */
@@ -1128,17 +1143,16 @@
     overflow: hidden;
 }
 
-/* Track Container for Logos */
+/* Track with Duplicate Items */
 .certifications-track {
     display: flex;
     gap: 50px; /* Space between logos */
-    animation: scrollInfinite 15s linear infinite; /* Continuous sliding animation */
-    width: calc(300px * 10 + 50px * 10); /* Total width: 10 logos + spacing */
+    width: calc(300px * 10 + 50px * 10); /* Adjusted total width for smooth animation */
+    animation: scrollLoop 20s linear infinite;
 }
 
-/* Individual Certification Cards */
 .certification-card {
-    flex: 0 0 150px; /* Logo size smaller */
+    flex: 0 0 150px; /* Fixed size for the logos */
     height: 150px;
     display: flex;
     justify-content: center;
@@ -1157,8 +1171,8 @@
     transform: scale(1.1);
 }
 
-/* Keyframes for Infinite Scrolling */
-@keyframes scrollInfinite {
+/* Keyframes for Smooth Infinite Scrolling */
+@keyframes scrollLoop {
     from {
         transform: translateX(0);
     }
@@ -1167,6 +1181,7 @@
     }
 }
 </style>
+
 
 
 <!-- Footer Section -->
