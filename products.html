@@ -277,52 +277,115 @@ footer {
 .filter-bar {
     position: sticky;
     top: 60px;
-    background: linear-gradient(90deg, #0E2841, #98DED9);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    z-index: 999;
+    background: linear-gradient(90deg, #0E2841, #98DED9); /* Gradient */
+    z-index: 1000;
     display: flex;
-    justify-content: center;
-    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
     padding: 15px 20px;
-    margin: 0 auto 30px;
     border-radius: 5px;
-    max-width: 90%;
-}
-.filter-bar a {
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 16px;
-    color: #ffffff;
-    position: relative;
-    transition: color 0.3s ease;
-}
-.filter-bar a:hover {
-    color: #FFD700; /* Gold hover color */
-}
-.filter-bar a::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background: #FFD700; /* Gold underline */
-    left: 50%;
-    bottom: -5px;
-    transition: width 0.3s ease, left 0.3s ease;
-}
-.filter-bar a:hover::after {
-    width: 100%;
-    left: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
 }
 
-/* Scroll Animation for the Filter Bar */
-@keyframes slideInFromTop {
-    0% {
-        transform: translateY(-100%);
-        opacity: 0;
+/* Dropdown Styling */
+.filter-dropdown {
+    position: relative;
+}
+
+.dropdown-btn {
+    background: #161D6F;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-btn:hover {
+    background: #0B2F9F;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px 0;
+    z-index: 100;
+}
+
+.dropdown-content a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background: #f1f1f1;
+}
+
+/* Show Dropdown on Hover */
+.filter-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Active Filters */
+.active-filters {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.active-filters .filter-chip {
+    background: #FFD700;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.filter-chip button {
+    background: none;
+    border: none;
+    margin-left: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Clear Filters Button */
+.filter-actions .clear-filters {
+    background: #E63946;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.clear-filters:hover {
+    background: #C62828;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .filter-bar {
+        flex-direction: column;
+        align-items: flex-start;
     }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
+    .filter-dropdown {
+        margin-bottom: 10px;
     }
 }
     /* Products Section */
@@ -376,14 +439,27 @@ footer {
 
 <!-- Filter Bar -->
 <div class="filter-bar">
-    <a href="#joint-support" class="filter-link">Joint Support</a>
-    <a href="#vitamins" class="filter-link">Vitamins & Derivatives</a>
-    <a href="#herbal-extracts" class="filter-link">Herbal Extracts</a>
-    <a href="#sport-nutrition" class="filter-link">Sport Nutrition</a>
-    <a href="#protein" class="filter-link">Protein</a>
-    <a href="#preservatives" class="filter-link">Preservatives</a>
-    <a href="#sweeteners" class="filter-link">Sweeteners</a>
-    <a href="#other-additives" class="filter-link">Other Additives</a>
+    <div class="filter-categories">
+        <div class="filter-dropdown">
+            <button class="dropdown-btn">Category</button>
+            <div class="dropdown-content">
+                <a href="#joint-support">Joint Support</a>
+                <a href="#vitamins">Vitamins & Derivatives</a>
+                <a href="#herbal-extracts">Herbal Extracts</a>
+                <a href="#sport-nutrition">Sport Nutrition</a>
+                <a href="#protein">Protein</a>
+                <a href="#preservatives">Preservatives</a>
+                <a href="#sweeteners">Sweeteners</a>
+                <a href="#other-additives">Other Additives</a>
+            </div>
+        </div>
+    </div>
+    <div class="active-filters">
+        <!-- Active filters will appear dynamically -->
+    </div>
+    <div class="filter-actions">
+        <button class="clear-filters">Clear All</button>
+    </div>
 </div>
 
 <!-- Products Section -->
@@ -670,6 +746,37 @@ footer {
                 window.scrollTo({ top: offset, behavior: 'smooth' });
             }
         });
+    });
+</script>
+    <script>
+    // Manage Active Filters
+    const activeFilters = document.querySelector('.active-filters');
+    const dropdownLinks = document.querySelectorAll('.dropdown-content a');
+    const clearFiltersBtn = document.querySelector('.clear-filters');
+
+    dropdownLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const filterText = e.target.textContent;
+
+            // Avoid duplicate filters
+            if (!Array.from(activeFilters.children).some(chip => chip.textContent.includes(filterText))) {
+                const chip = document.createElement('div');
+                chip.classList.add('filter-chip');
+                chip.innerHTML = `${filterText} <button>&times;</button>`;
+                activeFilters.appendChild(chip);
+
+                // Remove filter on button click
+                chip.querySelector('button').addEventListener('click', () => {
+                    chip.remove();
+                });
+            }
+        });
+    });
+
+    // Clear All Filters
+    clearFiltersBtn.addEventListener('click', () => {
+        activeFilters.innerHTML = '';
     });
 </script>
    
