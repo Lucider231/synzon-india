@@ -71,73 +71,137 @@ footer {
 }
         
         /* Navigation Bar */
-nav {
-    background: #f7f7f7;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 10;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-nav .logo-text {
-    display: flex;
-    align-items: center;
-    padding: 5px 10px;
-}
-nav .logo-text img {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-    transition: transform 0.3s ease;
-}
-nav .logo-text img:hover {
-    transform: scale(1.5);
-}
-nav .separator {
-    height: 50px;
-    width: 2px;
-    background-color: #0E2841;
-    margin: 0 10px;
-}
-nav .company-name {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    font-family: 'Roboto', sans-serif;
-    color: #0E2841;
-}
-nav .company-name .synzon {
-    font-size: 24px;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-nav .company-name .india {
-    font-size: 20px;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-top: -5px;
-}
-nav ul {
-    display: flex;
-    list-style: none;
-}
-nav ul li {
-    margin: 0 15px;
-    position: relative;
-}
-nav ul li a {
-    color: #333;
-    text-decoration: none;
-    font-size: 15px;
-    transition: color 0.3s ease;
-}
-nav ul li a:hover {
-    color: #0E2841;
-}
+        nav {
+            background: #f7f7f7;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+        }
+        nav .logo-text {
+            display: flex;
+            align-items: center;
+            padding: 5px 10px;
+            border-radius: 8px;
+            animation: fadeIn 3s ease-in-out;
+        }
+        nav .logo-text img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            transition: transform 0.3s ease;
+            animation: slideIn 3s ease-in-out;
+        }
+        nav .logo-text img:hover {
+            transform: scale(1.5);
+        }
+        nav .logo-text img:active {
+            animation: spin 0.6s linear;
+        }
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        nav .separator {
+            height: 50px;
+            width: 2px;
+            background-color: #0E2841;
+            margin: 0 10px;
+        }
+        nav .logo-text .company-name {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            font-family: 'Roboto', sans-serif;
+            color: #0E2841;
+            animation: fadeIn 3s ease-in-out;
+        }
+        nav .company-name .synzon {
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        nav .company-name .india {
+            font-size: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-top: -5px;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        nav ul li {
+            margin: 0 15px;
+            position: relative;
+        }
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+            font-size: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+        nav ul li a::after {
+            content: "";
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #0E2841;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
+        nav ul li a:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+        nav ul li .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #ffffff;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            list-style: none;
+            border-radius: 5px;
+            min-width: 200px;
+        }
+        nav ul li:hover .dropdown-content {
+            display: block;
+        }
+        nav ul li .dropdown-content li {
+            margin: 5px 0;
+        }
+        nav ul li .dropdown-content li a {
+            color: #0B2F9F;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        nav ul li .dropdown-content li a:hover {
+            color: #161D6F;
+        }
+
+        /* Animation Keyframes */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        @keyframes slideIn {
+            0% { transform: translateX(-50px); }
+            100% { transform: translateX(0); }
+        }
 
         /* Hero Section */
         .video-container {
